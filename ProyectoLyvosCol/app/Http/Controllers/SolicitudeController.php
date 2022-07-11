@@ -53,9 +53,9 @@ class SolicitudeController extends Controller
 
         $solicitude = Solicitude::create($request->all());
 
-        return $solicitude ;
-        //redirect()->route('solicitudes.index')
-          //  ->with('success', 'Solicitude created successfully.');
+        //return $solicitude ;
+        redirect()->route('solicitudes.index')
+         ->with('success', 'Solicitude created successfully.');
     }
 
     /**
