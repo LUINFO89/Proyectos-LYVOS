@@ -6,6 +6,7 @@ use App\Models\Alumno;
 use App\Models\Grado;
 use App\Models\Certificacione;
 use App\Models\Solicitude;
+use PDF;
 
 use Illuminate\Http\Request;
 
@@ -28,6 +29,18 @@ class AlumnoController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $alumnos->perPage());
     }
 
+    public function downloadPdf()
+    {
+        $alumnos = Alumno::paginate();
+
+       view()->share('alumno.pdf',$alumnos);
+       
+
+        $pdf = PDF::loadView('alumno.pdf', ['alumnos' => $alumnos]);
+
+        //return $pdf->download('alumnos.pdf');
+        return $pdf->stream();
+    }
     /**
      * Show the form for creating a new resource.
      *

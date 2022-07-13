@@ -20,7 +20,11 @@
                                 <a href="{{ route('alumnos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
+                                <a href="{{ route('download-pdf') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('pdf') }}
+                                  </a>
                               </div>
+                             
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -29,9 +33,9 @@
                         </div>
                     @endif
 
-                    <div class="card-body">
+                    <div class="card-body " >
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table class="table table-striped table-hover table-bordered mt-5" >
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>

@@ -25,5 +25,6 @@ Route::resource('solicitudes',App\Http\Controllers\SolicitudeController::class);
 Route::resource('alumnos',App\Http\Controllers\AlumnoController::class);
 Route::resource('certificaciones',App\Http\Controllers\CertificacioneController::class);
 
+Route::get('download-pdf', [App\Http\Controllers\AlumnoController::class, 'downloadPdf'])->name('download-pdf');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
