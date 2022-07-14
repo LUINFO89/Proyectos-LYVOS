@@ -75,15 +75,21 @@
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('certificaciones.index') }}">
+            <a href="{{ route('informes.index') }}">
               <i class="nc-icon nc-paper"></i>
-              <p>Informes</p>
+              <p>Imprimir estadisticos</p>
             </a>
           </li>
           <li class="active ">
             <a href="{{ route('certificaciones.index') }}">
               <i class="nc-icon nc-settings"></i>
               <p>Perfil</p>
+            </a>
+          </li>
+          <li class="active ">
+            <a href="{{ route('certificaciones.index') }}">
+              <i class="nc-icon nc-satisfied"></i>
+              <p>Usuarios</p>
             </a>
           </li>
           <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;">
@@ -133,6 +139,7 @@
             @else
             <a id="navbar" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false" v-pre>
+              {{ Auth::user()->email}}
               
             </a>
 

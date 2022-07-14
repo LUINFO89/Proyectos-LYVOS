@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Grado;
 use Illuminate\Http\Request;
+use PDF;
 
 /**
  * Class GradoController
@@ -22,6 +23,17 @@ class GradoController extends Controller
 
         return view('grado.index', compact('grados'))
             ->with('i', (request()->input('page', 1) - 1) * $grados->perPage());
+    }
+    public function downloadPdf()
+    {
+        $grados = Grado::paginate();
+
+        view()->share('grado.pdf', $grados);
+
+
+        $pdf = PDF::loadView('grado.pdf', ['grados' => $grados]);
+
+        return $pdf->stream();
     }
 
     /**

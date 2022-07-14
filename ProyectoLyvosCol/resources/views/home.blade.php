@@ -14,6 +14,17 @@
                         {{ session('status') }}
                     </div>
                     @endif
+                    
+                    <div clas="col-md-3">
+                        <div class="card border-danger mx-sm-1 p3">
+                            
+                            <div class="text-danger text-center mt-3"><h4>Usuarios Creados</h4></div>
+                            <div class="text-danger text-center mt-3"><h1>{{ Auth::user()->count() }}</h1></div>
+
+                        </div>
+                        
+
+                    </div>
 
                     {{ __('You are logged in!') }}
                 </div>

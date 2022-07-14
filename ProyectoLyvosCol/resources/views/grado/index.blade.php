@@ -20,6 +20,10 @@ Grados
                             data-placement="left">
                             {{ __('Crear nuevo') }}
                         </a>
+                        <a href="{{ route('download-pdf-grados') }}" class="btn btn-primary btn-sm float-right"
+                            data-placement="left">
+                            {{ __('lista total de grados en pdf') }}
+                        </a>
                     </div>
                 </div>
             </div>
