@@ -19,23 +19,24 @@ Solicitude
                             {{ __('TIPO DE INFORME') }}
                         </span>
                         <!-- Example single danger button -->
-                        <div class="dropdown">
+                        <div class="dropdown" >
                             <button class="btn btn-secundary dropdown-toggle" type="button" id="dropdownMenu2"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 800px">
                                 Seleccione.... </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <a href="{{ route('download-pdf') }}" class="dropdown-item" data-placement="left">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="font-size: 18px">
+                                <a href="{{ route('download-pdf') }}" class="dropdown-item" data-placement="center" style="font-size: 18px">
                                     {{ __('1. Informe de Estudiantes Activos') }}
                                 </a>
-                                <a href="{{ route('download-pdf-grados') }}" class="dropdown-item"
+                                <a href="{{ route('download-pdf-grados') }}" class="dropdown-item" style="font-size: 18px"
                                     data-placement="left">
                                     {{ __('2. Informe Total de Grados') }}
                                 </a>
-                                <a href="{{ route('download-pdf-solicitudes') }}" class="dropdown-item"
+                                <a href="{{ route('download-pdf-solicitudes') }}" class="dropdown-item" style="font-size: 18px"
                                     data-placement="left">
                                     {{ __('3. Informe Total de Solicitudes ') }}
                                 </a>
-                                <a href="{{ route('download-pdf-certificaciones') }}" class="dropdown-item" data-placement="left">
+                                <a href="{{ route('download-pdf-certificaciones') }}" class="dropdown-item" style="font-size: 18px"
+                                data-placement="left">
                                     {{ __('4. Informe total de certificaciones ') }}
                                 </a>
                             </div>

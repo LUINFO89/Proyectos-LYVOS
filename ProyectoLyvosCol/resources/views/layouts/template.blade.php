@@ -22,82 +22,83 @@
   <link href="./assets/demo/demo.css" rel="stylesheet" />
   <script src="sweetalert2.min.js"></script>
   <link rel="stylesheet" href="sweetalert2.min.css">
+  
 
 </head>
 
-<body class="">
-  <div class="wrapper ">
-    <div class="sidebar" data-color="white" data-active-color="danger">
+<body class="" style="font-size: 18px">
+  <div class="wrapper " >
+    <div class="sidebar" data-color="#20c997" data-active-color="danger" >
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="https://www.creative-tim.com" class="simple-text logo-mini" >
           <div class="logo-image-small">
             <img src="./assets/img/logo-small.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="https://www.creative-tim.com" class="simple-text logo-normal" style="font-size: 18px">
           LYVOS COLOMBIA
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
           </div> -->
         </a>
       </div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="active ">
-            <a href="{{ route('home') }}">
+      <div class="sidebar-wrapper" >
+        <ul class="nav"  >
+          <li class="active " >
+            <a href="{{ route('home') }}" style="font-size: 18px">
               <i class="nc-icon nc-bank"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('grados.index') }}">
+            <a href="{{ route('grados.index') }}" style="font-size: 18px">
               <i class="nc-icon nc-badge"></i>
               <p>Grados</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('alumnos.index') }}">
+            <a href="{{ route('alumnos.index') }}" style="font-size: 18px">
               <i class="nc-icon nc-circle-10"></i>
               <p>Alumnos</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('solicitudes.index') }}">
+            <a href="{{ route('solicitudes.index') }}" style="font-size: 18px">
               <i class="nc-icon nc-bullet-list-67"></i>
               <p>Solicitudes</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('certificaciones.index') }}">
+            <a href="{{ route('certificaciones.index') }}" style="font-size: 18px">
               <i class="nc-icon nc-hat-3"></i>
               <p>Certificaciones</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('informes.index') }}">
+            <a href="{{ route('informes.index') }}" style="font-size: 18px">
               <i class="nc-icon nc-paper"></i>
               <p>Imprimir estadisticos</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('certificaciones.index') }}">
+            <a href="{{ route('certificaciones.index') }}" style="font-size: 18px">
               <i class="nc-icon nc-settings"></i>
               <p>Perfil</p>
             </a>
           </li>
-          <li class="active ">
-            <a href="{{ route('certificaciones.index') }}">
+          <li class="active " >
+            <a href="{{ route('usuarios.index') }}" style="font-size: 18px">
               <i class="nc-icon nc-satisfied"></i>
               <p>Usuarios</p>
             </a>
           </li>
-          <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;">
+          <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;" >
             <div class="container-fluid">
               <div class="row m-2">
                
                 <div class="credits ml-auto">
-                  <span class="copyright">
+                  <span class="copyright" style="color: aliceblue">
                      © 2022, made by Developer: Luis Hernando Soto Mesa
                   </span>
                 </div>
