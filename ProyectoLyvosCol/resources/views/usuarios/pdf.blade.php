@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Informe de progrmas activos</title>
+    <title>Informe de usuarios activos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
@@ -17,29 +17,31 @@
 </head>
 
 <body>
-    <h1>lista de grados o programas en orden de creacion</h1>
+    <h3>Lista de usuarios Activos </h3>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-striped table-hover">
                 <thead class="thead">
                     <tr>
-
+                        <th>Id</th>
 
                         <th>Nombre</th>
-                        <th>Precio</th>
+                        <th>Email</th>
 
 
+                        
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($grados as $grado)
+                    @foreach ($users as $user)
                     <tr>
 
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
 
-                        <td>{{ $grado->nombreGrado }}</td>
-                        <td>{{ $grado->precioGrado }}</td>
 
-
+               
                     </tr>
                     @endforeach
                 </tbody>

@@ -20,9 +20,9 @@ Usuario
                             data-placement="left">
                             {{ __('Crear nuevo') }}
                         </a>
-                        <a href="{{ route('download-pdf-grados') }}" class="btn btn-primary btn-sm float-right"
+                        <a href="{{ route('download-pdf-users') }}" class="btn btn-primary btn-sm float-right"
                             data-placement="left">
-                            {{ __('lista total de grados en pdf') }}
+                            {{ __('lista total de usuarios en pdf') }}
                         </a>
                     </div>
                 </div>

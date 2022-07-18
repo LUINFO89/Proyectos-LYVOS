@@ -15,13 +15,13 @@ Solicitude
 
                     <div style="display: center;  align-items: center;">
 
-                        <span id="card_title" style="display:flex;  align-items: center; margin:5%  ;font-size: 30px; ">
+                        <span id="card_title " style="display:flex;  align-items: center; margin:5%  ;font-size: 30px; ">
                             {{ __('TIPO DE INFORME') }}
                         </span>
                         <!-- Example single danger button -->
-                        <div class="dropdown" >
+                        <div class="dropdown " >
                             <button class="btn btn-secundary dropdown-toggle" type="button" id="dropdownMenu2"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 800px">
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 80%">
                                 Seleccione.... </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="font-size: 18px">
                                 <a href="{{ route('download-pdf') }}" class="dropdown-item" data-placement="center" style="font-size: 18px">
@@ -37,7 +37,11 @@ Solicitude
                                 </a>
                                 <a href="{{ route('download-pdf-certificaciones') }}" class="dropdown-item" style="font-size: 18px"
                                 data-placement="left">
-                                    {{ __('4. Informe total de certificaciones ') }}
+                                    {{ __('4. Informe Total de certificaciones ') }}
+                                </a>
+                                <a href="{{ route('download-pdf-users') }}" class="dropdown-item" style="font-size: 18px"
+                                data-placement="left">
+                                    {{ __('5    . Informe Total de Usuarios ') }}
                                 </a>
                             </div>
                         </div>

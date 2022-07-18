@@ -44,7 +44,6 @@
 										<th>Identificacion</th>
 										<th>Nombres</th>
 										<th>Primer Apellido</th>
-										<th>Segundo Apellido</th>
 										<th>Correo</th>
 										<th>Direccion</th>
 										<th>Telefono</th>
@@ -66,7 +65,6 @@
 											<td>{{ $alumno->documentoIdentidadAlumno }}</td>
 											<td>{{ $alumno->nombresAlumno }}</td>
 											<td>{{ $alumno->primerApellidoAlumno }}</td>
-											<td>{{ $alumno->segundoApellidoAlumno }}</td>
 											<td>{{ $alumno->correoElectronicoAlumno }}</td>
 											<td>{{ $alumno->direccionAlumno }}</td>
 											<td>{{ $alumno->telefonoAlumno }}</td>

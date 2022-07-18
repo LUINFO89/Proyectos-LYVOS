@@ -21,8 +21,8 @@ Certificacione
                                 data-placement="left">
                                 {{ __('Create New') }}
                             </a>
-                            <a href="{{ route('download-pdf-certificaciones') }}" class="btn btn-primary btn-sm float-right"
-                                data-placement="left">
+                            <a href="{{ route('download-pdf-certificaciones') }}"
+                                class="btn btn-primary btn-sm float-right" data-placement="left">
                                 {{ __('lista total de certificados en pdf') }}
                             </a>
                         </div>
@@ -81,9 +81,13 @@ Certificacione
                                             <a class="btn btn-sm btn-primary "
                                                 href="{{ route('certificaciones.show',$certificacione->id) }}"><i
                                                     class="fa fa-fw fa-eye"></i> Show</a>
+
                                             <a class="btn btn-sm btn-success"
                                                 href="{{ route('certificaciones.edit',$certificacione->id) }}"><i
                                                     class="fa fa-fw fa-edit"></i> Edit</a>
+                                            <a class="btn btn-sm btn-secundary "
+                                                href="{{ route('downloadPdfcertificado',$certificacione->id) }}"><i
+                                                    class="fa fa-fw fa-eye"></i> Descargar Certificado {{ $certificacione->tipodeCertificaciones }}</a>
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm"><i

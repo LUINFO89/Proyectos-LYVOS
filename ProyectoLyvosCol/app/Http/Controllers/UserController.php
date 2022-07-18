@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use PDF;
 
@@ -10,12 +11,13 @@ class UserController extends Controller
 {
     //
 
-    public function index(){
+    public function index()
+    {
         $users = User::paginate();
 
         return view('usuarios.index', compact('users'))
-        ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
-    } 
+            ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
+    }
 
     public function downloadPdf()
     {
@@ -89,18 +91,26 @@ class UserController extends Controller
      * @param  Grado $grado
      * @return \Illuminate\Http\Response
      */
+  
     public function update(Request $request, User $user)
     {
-        request()->validate(User::$rules);
-
+        $request->validate([
+            'name' => 'required',
+        ]);
+        $user->update($request->all());
+        if ($user === null) {
+            return response()->json('Company Not found', 404);
+        }
         $user->update($request->all());
 
         return redirect()->route('usuarios.index')
-            ->with('success', 'Usuarios updated successfully');
+            ->with('success', 'Solicitude updated successfully');
+            //return response()->json($user->all());
+
     }
-   
-  
-   
+
+
+
     /**
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
@@ -115,5 +125,4 @@ class UserController extends Controller
     }
 
     
-
 }

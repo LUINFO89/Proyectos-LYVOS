@@ -22,15 +22,15 @@
   <link href="./assets/demo/demo.css" rel="stylesheet" />
   <script src="sweetalert2.min.js"></script>
   <link rel="stylesheet" href="sweetalert2.min.css">
-  
+
 
 </head>
 
-<body class="" style="font-size: 18px">
-  <div class="wrapper " >
-    <div class="sidebar" data-color="#20c997" data-active-color="danger" >
+<body class="" > <!--style="font-size: 14px"-->
+  <div class="wrapper ">
+    <div class="sidebar" data-color="#20c997" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini" >
+        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="./assets/img/logo-small.png">
           </div>
@@ -43,63 +43,63 @@
           </div> -->
         </a>
       </div>
-      <div class="sidebar-wrapper" >
-        <ul class="nav"  >
-          <li class="active " >
-            <a href="{{ route('home') }}" style="font-size: 18px">
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="active ">
+            <a href="{{ route('home') }}" style="font-size: 14px">
               <i class="nc-icon nc-bank"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('grados.index') }}" style="font-size: 18px">
+            <a href="{{ route('grados.index') }}" style="font-size: 14px">
               <i class="nc-icon nc-badge"></i>
               <p>Grados</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('alumnos.index') }}" style="font-size: 18px">
+            <a href="{{ route('alumnos.index') }}" style="font-size: 14px">
               <i class="nc-icon nc-circle-10"></i>
               <p>Alumnos</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('solicitudes.index') }}" style="font-size: 18px">
+            <a href="{{ route('solicitudes.index') }}" style="font-size: 14px">
               <i class="nc-icon nc-bullet-list-67"></i>
               <p>Solicitudes</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('certificaciones.index') }}" style="font-size: 18px">
+            <a href="{{ route('certificaciones.index') }}" style="font-size: 14px">
               <i class="nc-icon nc-hat-3"></i>
               <p>Certificaciones</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('informes.index') }}" style="font-size: 18px">
+            <a href="{{ route('informes.index') }}" style="font-size: 14px">
               <i class="nc-icon nc-paper"></i>
               <p>Imprimir estadisticos</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('certificaciones.index') }}" style="font-size: 18px">
+            <a href="{{ route('NewPassword') }}" style="font-size: 14px">
               <i class="nc-icon nc-settings"></i>
               <p>Perfil</p>
             </a>
           </li>
-          <li class="active " >
-            <a href="{{ route('usuarios.index') }}" style="font-size: 18px">
+          <li class="active ">
+            <a href="{{ route('usuarios.index') }}" style="font-size: 14px">
               <i class="nc-icon nc-satisfied"></i>
               <p>Usuarios</p>
             </a>
           </li>
-          <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;" >
+          <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;">
             <div class="container-fluid">
               <div class="row m-2">
-               
+
                 <div class="credits ml-auto">
                   <span class="copyright" style="color: aliceblue">
-                     © 2022, made by Developer: Luis Hernando Soto Mesa
+                    © 2022, made by Developer: Luis Hernando Soto Mesa
                   </span>
                 </div>
               </div>
@@ -129,7 +129,8 @@
 
             @guest
             @if (Route::has('login'))
-            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            <a class="nav-link" href="{{ route('login') }}">{{ __(' ') }}</a>
+
 
             @endif
 
@@ -141,11 +142,11 @@
             <a id="navbar" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false" v-pre>
               {{ Auth::user()->email}}
-              
+
             </a>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+              <a class="nav-link dropdown-toggle"" href=" {{ route('logout') }}" onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
               </a>
@@ -157,7 +158,9 @@
 
             @endguest
 
-
+            @auth
+              
+            
             <ul class="navbar-nav">
 
               <li class="nav-item btn-rotate dropdown">
@@ -166,27 +169,30 @@
                   <i class="nc-icon nc-user"> </i>
                   {{ Auth::user()->name }}
 
-                  <p>
-                    <span class="d-lg-none d-md-block">Some Actions</span>
-                  </p>
+
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                  </a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+
+                <form action="" method="post">
+
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                       document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                    </a>
+                  </div>
+                </form>
+               
               </li>
 
 
             </ul>
+            @endauth
 
           </div>
         </div>
       </nav>
       <!-- End Navbar -->
-      <div class="container-auto" style="margin-top: 8% ; ">
+      <div class="container-auto" style="margin-top: 12% ; ">
 
         @yield('content')
 
@@ -194,7 +200,7 @@
 
 
 
-   
+
     </div>
   </div>
   <!--   Core JS Files   -->
