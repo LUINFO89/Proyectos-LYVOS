@@ -82,6 +82,7 @@ class CertificacioneController extends Controller
         return view('certificacione.show', compact('certificacione'));
     }
 
+  
     /**
      * Show the form for editing the specified resource.
      *

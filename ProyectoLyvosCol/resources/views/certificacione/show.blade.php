@@ -1,77 +1,78 @@
-@extends('layouts.template')
+<!DOCTYPE html>
+<html lang="es">
 
-@section('template_title')
-    {{ $certificacione->name ?? 'Show Certificacione' }}
-@endsection
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-@section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="float-left">
-                            <span class="card-title">Show Certificacione</span>
-                        </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('certificaciones.index') }}"> Back</a>
-                        </div>
-                    </div>
+    <style>
+        
+        
 
-                    <div class="card-body">
-                        
-                        <div class="form-group">
-                            <strong>Tipoidentificacioncertificaciones:</strong>
-                            {{ $certificacione->tipoIdentificacionCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Documentoidentidadalumno Id:</strong>
-                            {{ $certificacione->documentoIdentidadAlumno_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Nombrescertificaciones:</strong>
-                            {{ $certificacione->nombresCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Primerapellidocertificaciones:</strong>
-                            {{ $certificacione->primerApellidoCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Segundoapellidocertificaciones:</strong>
-                            {{ $certificacione->segundoApellidoCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Correoelectronicocertificaciones:</strong>
-                            {{ $certificacione->correoElectronicoCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Tipodecertificaciones:</strong>
-                            {{ $certificacione->tipodeCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Anocertificacioncertificaciones:</strong>
-                            {{ $certificacione->anoCertificacionCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Certificacionesgrado Id:</strong>
-                            {{ $certificacione->certificacionesGrado_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Comentarioscertificaciones:</strong>
-                            {{ $certificacione->comentariosCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Descargarrecibocertificaciones:</strong>
-                            {{ $certificacione->descargarReciboCertificaciones }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Cargarrecibocertificaciones:</strong>
-                            {{ $certificacione->cargarReciboCertificaciones }}
-                        </div>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #313944;
+            background: #F6FBFF;
+            
+            
+        }
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-@endsection
+        body p {
+            margin: 0
+        }
+
+       
+       
+        #selection{
+
+            margin-top: 5%;
+            margin-left: 200px;
+            width: 900px;
+            height: 900px;
+            align-content: center;
+            background: #dcf3e4;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="botones">
+        <a class="btn btn-primary" href="{{ route('certificaciones.index') }}"> Back</a>
+        <a href="javascript:imprSelec('seleccion')">Imprimir texto</a>
+    </div>
+
+    <div id="selection" class="container-fluid">
+        
+        
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    function imprimirElemento() {
+        window.print();
+}
+
+function imprSelec(nombre) {
+	  var ficha = document.getElementById(nombre);
+	  var ventimp = window.open(' ', 'popimpr');
+	  ventimp.document.write( ficha.innerHTML );
+	  ventimp.document.close();
+	  ventimp.print( );
+	  ventimp.close();
+	}
+
+</script>

@@ -21,7 +21,7 @@ class InformesController extends Controller
 
         //$certificaciones = Certificacione::findOrFail($id);
        // $datosCertificado = request() -> $request->except('_token','_method')
-        $certificacione = Certificacione::paginate();
+        $certificacione = Certificacione::findOrFail($id);
 
        view()->share('informes.certificaciones', $certificacione);
 

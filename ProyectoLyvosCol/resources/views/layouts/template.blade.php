@@ -52,43 +52,43 @@
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('grados.index') }}" style="font-size: 14px">
+            <a href="{{ route('grados.index') }}" >
               <i class="nc-icon nc-badge"></i>
               <p>Grados</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('alumnos.index') }}" style="font-size: 14px">
+            <a href="{{ route('alumnos.index') }}" >
               <i class="nc-icon nc-circle-10"></i>
               <p>Alumnos</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('solicitudes.index') }}" style="font-size: 14px">
+            <a href="{{ route('solicitudes.index') }}" >
               <i class="nc-icon nc-bullet-list-67"></i>
               <p>Solicitudes</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('certificaciones.index') }}" style="font-size: 14px">
+            <a href="{{ route('certificaciones.index') }}" >
               <i class="nc-icon nc-hat-3"></i>
               <p>Certificaciones</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('informes.index') }}" style="font-size: 14px">
+            <a href="{{ route('informes.index') }}" >
               <i class="nc-icon nc-paper"></i>
               <p>Imprimir estadisticos</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('NewPassword') }}" style="font-size: 14px">
+            <a href="{{ route('NewPassword') }}" >
               <i class="nc-icon nc-settings"></i>
               <p>Perfil</p>
             </a>
           </li>
           <li class="active ">
-            <a href="{{ route('usuarios.index') }}" style="font-size: 14px">
+            <a href="{{ route('usuarios.index') }}" >
               <i class="nc-icon nc-satisfied"></i>
               <p>Usuarios</p>
             </a>
@@ -97,7 +97,7 @@
             <div class="container-fluid">
               <div class="row m-2">
 
-                <div class="credits ml-auto">
+                <div class="credits ml-auto m-10">
                   <span class="copyright" style="color: aliceblue">
                     © 2022, made by Developer: Luis Hernando Soto Mesa
                   </span>

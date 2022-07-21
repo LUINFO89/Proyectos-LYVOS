@@ -80,14 +80,13 @@ Certificacione
                                             method="POST">
                                             <a class="btn btn-sm btn-primary "
                                                 href="{{ route('certificaciones.show',$certificacione->id) }}"><i
-                                                    class="fa fa-fw fa-eye"></i> Show</a>
+                                                    class="fa fa-fw fa-eye"></i> Ver certificado </a>
 
                                             <a class="btn btn-sm btn-success"
                                                 href="{{ route('certificaciones.edit',$certificacione->id) }}"><i
                                                     class="fa fa-fw fa-edit"></i> Edit</a>
-                                            <a class="btn btn-sm btn-secundary "
-                                                href="{{ route('downloadPdfcertificado',$certificacione->id) }}"><i
-                                                    class="fa fa-fw fa-eye"></i> Descargar Certificado {{ $certificacione->tipodeCertificaciones }}</a>
+                                            
+                                            
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm"><i
@@ -106,3 +105,4 @@ Certificacione
     </div>
 </div>
 @endsection
+
