@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>KidKinder - Kindergarten Website Template</title>
+  <title>Gimnasio Psicopedagogico Guilford</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="Free HTML Templates" name="keywords" />
   <meta content="Free HTML Templates" name="description" />
@@ -30,32 +30,26 @@
   <link href="{{ asset('css/style.css')}}" rel="stylesheet" />
 </head>
 
-<body>
+<body >
   <!-- Navbar Start -->
   <div class="container-fluid bg-light position-relative shadow">
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
       <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px">
-        <i class="flaticon-043-teddy-bear"></i>
-        <span class="text-primary">KidKinder</span>
+        <img src="https://scontent.fbog3-2.fna.fbcdn.net/v/t1.6435-9/48373239_114628276247365_2485876652303712256_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEWgXwPNFVNJoRACHazKlYtH2Xva3v5EI0fZe9re_kQjVFFIkkvIyXfmJQQLg1nYSI51BxkUZgTEcyF9fZlGunt&_nc_ohc=Z-oWZBUixUEAX-e5s_4&tn=rZ7qVl0g5WuU4sV0&_nc_ht=scontent.fbog3-2.fna&oh=00_AT9R1jx4_-D0caTWrJl1P_GmciaOA-LwR2w_hzhM4JhPAQ&oe=62FFD16C" width="80px" alt="" style="border-radius: 100%">
+        <!--i class="flaticon-043-teddy-bear"></i-->
+        <span class="text-primary">GuilFord</span>
       </a>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <div class="navbar-nav font-weight-bold mx-auto py-0">
-          <a href="index.html" class="nav-item nav-link active">Home</a>
-          <a href="about.html" class="nav-item nav-link">About</a>
-          <a href="class.html" class="nav-item nav-link">Classes</a>
-          <a href="team.html" class="nav-item nav-link">Teachers</a>
-          <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-            <div class="dropdown-menu rounded-0 m-0">
-              <a href="blog.html" class="dropdown-item">Blog Grid</a>
-              <a href="single.html" class="dropdown-item">Blog Detail</a>
-            </div>
-          </div>
-          <a href="contact.html" class="nav-item nav-link">Contact</a>
+          <a href="index.html" class="nav-item nav-link active">Inicio</a>
+          <a href="about.html" class="nav-item nav-link">Acerca de</a>
+          <a href="team.html" class="nav-item nav-link">Profesores</a>
+          <a href="gallery.html" class="nav-item nav-link">Galeria</a>
+
+          <a href="contact.html" class="nav-item nav-link">Contacto</a>
         </div>
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -84,17 +78,16 @@
   <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
     <div class="row align-items-center px-3">
       <div class="col-lg-6 text-center text-lg-left">
-        <h4 class="text-white mb-4 mt-5 mt-lg-0">Kids Learning Center</h4>
+        <h4 class="text-white mb-4 mt-5 mt-lg-0">Centro de Aprendizaje para Ninos</h4>
         <h1 class="display-3 font-weight-bold text-white">
-          New Approach to Kids Education
-        </h1>
+          CEATIVIDAD INTELIGENCIA CONOCIMIENTO </h1>
         <p class="text-white mb-4">
           Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed
           sit. Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed
           ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo
           dolore.
         </p>
-        <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
+        <a href="" class="btn btn-secondary mt-1 py-3 px-5">Contactanos </a>
       </div>
       <div class="col-lg-6 text-center text-lg-right">
         <img class="img-fluid mt-5" src="img/header.png" alt="" />
