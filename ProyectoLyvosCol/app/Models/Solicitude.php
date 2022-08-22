@@ -15,15 +15,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property $segundoApellidoSolicitud
  * @property $correoElectronicoSolicitud
  * @property $tipodeCertificacionSolicitus
- * @property $anoCertificacionSolicitud
+ * @property $anodeingreso
  * @property $gradoSolicitud
- * @property $otrosSolicitud
- * @property $comentariosSolicitud
- * @property $descargarRecibo
- * @property $cargarRecibo
  * @property $created_at
  * @property $updated_at
  *
+ * @property Grado $grado
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -36,8 +33,7 @@ class Solicitude extends Model
 		'nombresSolicitud' => 'required',
 		'primerApellidoSolicitud' => 'required',
 		'tipodeCertificacionSolicitus' => 'required',
-		'anoCertificacionSolicitud' => 'required',
-		'gradoSolicitud' => 'required',
+		'anodeingreso' => 'required',
     ];
 
     protected $perPage = 20;
@@ -47,8 +43,16 @@ class Solicitude extends Model
      *
      * @var array
      */
-    protected $fillable = ['tipoIdentificacionSolicitud','documentoIdentidadSolicitud','nombresSolicitud','primerApellidoSolicitud','segundoApellidoSolicitud','correoElectronicoSolicitud','tipodeCertificacionSolicitus','anoCertificacionSolicitud','gradoSolicitud','otrosSolicitud','comentariosSolicitud','descargarRecibo','cargarRecibo'];
+    protected $fillable = ['tipoIdentificacionSolicitud','documentoIdentidadSolicitud','nombresSolicitud','primerApellidoSolicitud','segundoApellidoSolicitud','correoElectronicoSolicitud','tipodeCertificacionSolicitus','anodeingreso','gradoSolicitud'];
 
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function grado()
+    {
+        return $this->hasOne('App\Models\Grado', 'id', 'gradoSolicitud');
+    }
+    
 
 }

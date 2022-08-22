@@ -3,7 +3,7 @@
         
         <div class="form-group">
             {{ Form::label('tipoIdentificacionSolicitud') }}
-            {{ Form::select('tipoIdentificacionSolicitud',['Seleccione','CC','RC','TI','TE'],0, ['class' => 'form-control' ]) }}
+            {{ Form::text('tipoIdentificacionSolicitud', $solicitude->tipoIdentificacionSolicitud, ['class' => 'form-control' . ($errors->has('tipoIdentificacionSolicitud') ? ' is-invalid' : ''), 'placeholder' => 'Tipoidentificacionsolicitud']) }}
             {!! $errors->first('tipoIdentificacionSolicitud', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -33,38 +33,18 @@
         </div>
         <div class="form-group">
             {{ Form::label('tipodeCertificacionSolicitus') }}
-            {{ Form::select('tipodeCertificacionSolicitus',['Certificado de estudios', 'Certificado de Notas','Boletines','Paz y salvo'],0, ['class' => 'form-control'. ($errors->has('tipodeCertificacionSolicitus') ? ' is-invalid' : '') ]    ) }}
+            {{ Form::text('tipodeCertificacionSolicitus', $solicitude->tipodeCertificacionSolicitus, ['class' => 'form-control' . ($errors->has('tipodeCertificacionSolicitus') ? ' is-invalid' : ''), 'placeholder' => 'Tipodecertificacionsolicitus']) }}
             {!! $errors->first('tipodeCertificacionSolicitus', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('anoCertificacionSolicitud') }}
-            {{ Form::text('anoCertificacionSolicitud', $solicitude->anoCertificacionSolicitud, ['class' => 'form-control' . ($errors->has('anoCertificacionSolicitud') ? ' is-invalid' : ''), 'placeholder' => 'Anocertificacionsolicitud']) }}
-            {!! $errors->first('anoCertificacionSolicitud', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::label('anodeingreso') }}
+            {{ Form::text('anodeingreso', $solicitude->anodeingreso, ['class' => 'form-control' . ($errors->has('anodeingreso') ? ' is-invalid' : ''), 'placeholder' => 'Anodeingreso']) }}
+            {!! $errors->first('anodeingreso', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('gradoSolicitud') }}
             {{ Form::text('gradoSolicitud', $solicitude->gradoSolicitud, ['class' => 'form-control' . ($errors->has('gradoSolicitud') ? ' is-invalid' : ''), 'placeholder' => 'Gradosolicitud']) }}
             {!! $errors->first('gradoSolicitud', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('otrosSolicitud') }}
-            {{ Form::text('otrosSolicitud', $solicitude->otrosSolicitud, ['class' => 'form-control' . ($errors->has('otrosSolicitud') ? ' is-invalid' : ''), 'placeholder' => 'Otrossolicitud']) }}
-            {!! $errors->first('otrosSolicitud', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('comentariosSolicitud') }}
-            {{ Form::text('comentariosSolicitud', $solicitude->comentariosSolicitud, ['class' => 'form-control' . ($errors->has('comentariosSolicitud') ? ' is-invalid' : ''), 'placeholder' => 'Comentariossolicitud']) }}
-            {!! $errors->first('comentariosSolicitud', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('descargarRecibo') }}
-            {{ Form::text('descargarRecibo', $solicitude->descargarRecibo, ['class' => 'form-control' . ($errors->has('descargarRecibo') ? ' is-invalid' : ''), 'placeholder' => 'Descargarrecibo']) }}
-            {!! $errors->first('descargarRecibo', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('cargarRecibo') }}
-            {{ Form::text('cargarRecibo', $solicitude->cargarRecibo, ['class' => 'form-control' . ($errors->has('cargarRecibo') ? ' is-invalid' : ''), 'placeholder' => 'Cargarrecibo']) }}
-            {!! $errors->first('cargarRecibo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>

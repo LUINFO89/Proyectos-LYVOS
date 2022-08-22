@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Certificacione</span>
+                        <span class="card-title">Crear  Certificación</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('certificaciones.store') }}"  role="form" enctype="multipart/form-data">

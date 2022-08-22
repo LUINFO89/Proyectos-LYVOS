@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Solicitude;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\DocBlock\Tags\See;
-use Solicitudes;
-use PDF;
 
 /**
  * Class SolicitudeController
@@ -25,17 +22,6 @@ class SolicitudeController extends Controller
 
         return view('solicitude.index', compact('solicitudes'))
             ->with('i', (request()->input('page', 1) - 1) * $solicitudes->perPage());
-    }
-    public function downloadPdf()
-    {
-        $solicitudes = Solicitude::paginate();
-
-        view()->share('solicitude.pdf', $solicitudes);
-
-
-        $pdf = PDF::loadView('solicitude.pdf', ['solicitudes' => $solicitudes]);
-        
-        return $pdf->stream();
     }
 
     /**
@@ -58,16 +44,11 @@ class SolicitudeController extends Controller
     public function store(Request $request)
     {
         request()->validate(Solicitude::$rules);
-        //$solicitud = new Solicitude();
-        //$solicitud ->  TipoIdentificacionSolicitud  = $request ->  TipoIdentificacionSolicitud ;
-        //$solicitud ->   DocumentoIdentidadSolicitud   = $request ->   DocumentoIdentidadSolicitud  ;
-
 
         $solicitude = Solicitude::create($request->all());
 
-        //return $solicitude ;
-        redirect()->route('solicitudes.index')
-         ->with('success', 'Solicitude created successfully.');
+        return redirect()->route('solicitudes.index')
+            ->with('success', 'Solicitude created successfully.');
     }
 
     /**

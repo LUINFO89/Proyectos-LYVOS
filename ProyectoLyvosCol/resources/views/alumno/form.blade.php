@@ -1,64 +1,64 @@
 <div class="box box-info padding-1">
-    <div class="box-body">
+    <div class="box-body"style="width: 50%">
 
         <div class="form-group">
-            {{ Form::label('tipoIdentificacionAlumno') }}
-            {{ Form::select('tipoIdentificacionAlumno',['Seleccione','CC','RC','TI','TE'],0, ['class' => 'form-control' ]) }}
+            {{ Form::label('Tipo de documento: ') }}
+            {{ Form::select('tipoIdentificacionAlumno',['Seleccione el tipo de documento','CC','RC','TI','TE'],0, ['class' => 'form-control' ]) }}
             {!! $errors->first('tipoIdentificacionAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('documentoIdentidadAlumno') }}
+            {{ Form::label('Numero de documento: ') }}
             {{ Form::text('documentoIdentidadAlumno', $alumno->documentoIdentidadAlumno, ['class' => 'form-control' .
             ($errors->has('documentoIdentidadAlumno') ? ' is-invalid' : ''), 'placeholder' =>
-            'Documentoidentidadalumno']) }}
+            '']) }}
             {!! $errors->first('documentoIdentidadAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('nombresAlumno') }}
+            {{ Form::label('Nombres :') }}
             {{ Form::text('nombresAlumno', $alumno->nombresAlumno, ['class' => 'form-control' .
-            ($errors->has('nombresAlumno') ? ' is-invalid' : ''), 'placeholder' => 'Nombresalumno']) }}
+            ($errors->has('nombresAlumno') ? ' is-invalid' : ''), 'placeholder' => '']) }}
             {!! $errors->first('nombresAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('primerApellidoAlumno') }}
+            {{ Form::label('Primer Apellido:') }}
             {{ Form::text('primerApellidoAlumno', $alumno->primerApellidoAlumno, ['class' => 'form-control' .
-            ($errors->has('primerApellidoAlumno') ? ' is-invalid' : ''), 'placeholder' => 'Primerapellidoalumno']) }}
+            ($errors->has('primerApellidoAlumno') ? ' is-invalid' : ''), 'placeholder' => '']) }}
             {!! $errors->first('primerApellidoAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('segundoApellidoAlumno') }}
+            {{ Form::label('Segundo Apellido') }}
             {{ Form::text('segundoApellidoAlumno', $alumno->segundoApellidoAlumno, ['class' => 'form-control' .
-            ($errors->has('segundoApellidoAlumno') ? ' is-invalid' : ''), 'placeholder' => 'Segundoapellidoalumno']) }}
+            ($errors->has('segundoApellidoAlumno') ? ' is-invalid' : ''), 'placeholder' => '']) }}
             {!! $errors->first('segundoApellidoAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('correoElectronicoAlumno') }}
+            {{ Form::label('Email:') }}
             {{ Form::text('correoElectronicoAlumno', $alumno->correoElectronicoAlumno, ['class' => 'form-control' .
-            ($errors->has('correoElectronicoAlumno') ? ' is-invalid' : ''), 'placeholder' => 'Correoelectronicoalumno'])
+            ($errors->has('correoElectronicoAlumno') ? ' is-invalid' : ''), 'placeholder' => ''])
             }}
             {!! $errors->first('correoElectronicoAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('direccionAlumno') }}
+            {{ Form::label('Dirección') }}
             {{ Form::text('direccionAlumno', $alumno->direccionAlumno, ['class' => 'form-control' .
-            ($errors->has('direccionAlumno') ? ' is-invalid' : ''), 'placeholder' => 'Direccionalumno']) }}
+            ($errors->has('direccionAlumno') ? ' is-invalid' : ''), 'placeholder' => '']) }}
             {!! $errors->first('direccionAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('telefonoAlumno') }}
+            {{ Form::label('telefono') }}
             {{ Form::text('telefonoAlumno', $alumno->telefonoAlumno, ['class' => 'form-control' .
-            ($errors->has('telefonoAlumno') ? ' is-invalid' : ''), 'placeholder' => 'Telefonoalumno']) }}
+            ($errors->has('telefonoAlumno') ? ' is-invalid' : ''), 'placeholder' => '']) }}
             {!! $errors->first('telefonoAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('fechadeNacimientoAlumno') }}
+            {{ Form::label('fecha de Nacimiento') }}
             {{ Form::date('fechadeNacimientoAlumno', $alumno->fechadeNacimientoAlumno, ['class' => 'form-control' .
-            ($errors->has('fechadeNacimientoAlumno') ? ' is-invalid' : ''), 'placeholder' => 'Fechadenacimientoalumno'])
+            ($errors->has('fechadeNacimientoAlumno') ? ' is-invalid' : ''), 'placeholder' => ''])
             }}
             {!! $errors->first('fechadeNacimientoAlumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('lugarNacimientoAlumno') }}
+            {{ Form::label('lugar de Nacimiento ') }} <br>
 
             {{ Form::select('lugarNacimientoAlumno',['Colombia','Ecuador','Bolivia',
             'Chile','Brazil','Venezuela','Peru',
@@ -91,4 +91,5 @@
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
+    
 </div>

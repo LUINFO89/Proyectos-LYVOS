@@ -8,13 +8,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     Software Lyvos Colombia
-
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
   <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+ 
   <!-- CSS Files -->
   <link href="{{ asset('./assets/css/bootstrap.min.css')}}" rel="stylesheet" />
   <link href="{{ asset('./assets/css/paper-dashboard.css?v=2.0.1')}}" rel="stylesheet" />
@@ -26,91 +24,100 @@
 
 </head>
 
-<body class="" > <!--style="font-size: 14px"-->
-  <div class="wrapper ">
-    <div class="sidebar" data-color="#20c997" data-active-color="danger">
+<body >
+  <div class="wrapper">
+    <div class="sidebar" >
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
-          <div class="logo-image-small">
-            <img src="./assets/img/logo-small.png">
-          </div>
-          <!-- <p>CT</p> -->
+         
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal" style="font-size: 18px">
-          LYVOS COLOMBIA
-          <!-- <div class="logo-image-big">
-            <img src="../assets/img/logo-big.png">
-          </div> -->
+        <a href="https://luiguie.jimdofree.com/" class="simple-text logo-normal" style="font-size: 11px">
+          Colegio Psicopedagógico Guilford
+           <div class="logo-image" style="margin-left: 30%">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=320x10000:format=png/path/s8b6a8e799386383b/image/i158ea38c76baa615/version/1612487596/image.png" style="width: 50%">
+          </div> 
         </a>
       </div>
-      <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper" >
         <ul class="nav">
-          <li class="active ">
-            <a href="{{ route('home') }}" style="font-size: 14px">
+          <li class="">
+            <a href="{{ route('home') }}"  >
               <i class="nc-icon nc-bank"></i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="active ">
+          <li class="">
             <a href="{{ route('grados.index') }}" >
               <i class="nc-icon nc-badge"></i>
               <p>Grados</p>
             </a>
           </li>
-          <li class="active ">
+          <li class=" ">
             <a href="{{ route('alumnos.index') }}" >
               <i class="nc-icon nc-circle-10"></i>
               <p>Alumnos</p>
             </a>
           </li>
-          <li class="active ">
+          <li class=" ">
+            <a href="{{ route('profesores.index') }}" >
+              <i class="nc-icon nc-hat-3"></i>
+              <p>Profesores</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="{{ route('asignaturas.index') }}" >
+              <i class="nc-icon nc-hat-3"></i>
+              <p>Asignaturas</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="{{ route('notas.index') }}" >
+              <i class="nc-icon nc-hat-3"></i>
+              <p>Notas</p>
+            </a>
+          </li>
+          
+          <li class=" ">
             <a href="{{ route('solicitudes.index') }}" >
               <i class="nc-icon nc-bullet-list-67"></i>
               <p>Solicitudes</p>
             </a>
           </li>
-          <li class="active ">
+          <li class=" ">
             <a href="{{ route('certificaciones.index') }}" >
               <i class="nc-icon nc-hat-3"></i>
               <p>Certificaciones</p>
             </a>
           </li>
-          <li class="active ">
+          <li class=" ">
             <a href="{{ route('informes.index') }}" >
               <i class="nc-icon nc-paper"></i>
               <p>Imprimir estadisticos</p>
             </a>
           </li>
-          <li class="active ">
+          
+
+
+          
+          <li class=" ">
             <a href="{{ route('NewPassword') }}" >
               <i class="nc-icon nc-settings"></i>
               <p>Perfil</p>
             </a>
           </li>
-          <li class="active ">
+          <li class=" ">
             <a href="{{ route('usuarios.index') }}" >
               <i class="nc-icon nc-satisfied"></i>
               <p>Usuarios</p>
             </a>
           </li>
-          <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;">
-            <div class="container-fluid">
-              <div class="row m-2">
-
-                <div class="credits ml-auto m-10">
-                  <span class="copyright" style="color: aliceblue">
-                    © 2022, made by Developer: Luis Hernando Soto Mesa
-                  </span>
-                </div>
-              </div>
-            </div>
-          </footer>
+         
         </ul>
       </div>
     </div>
-    <div class="main-panel" style="height: 100vh; ">
+    <div class="main-panel" style="height: 100vh; " style="background-color: #007965">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+     
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent" >
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-toggle">
@@ -120,9 +127,15 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <marquee behavior="" direction=""> <a class="navbar-brand" href="javascript:;">Licenciado: Colegio
-                Psicopedagogico Guilford </a>
-            </marquee>
+            <a id="navbar" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" v-pre>
+            Nombre: {{ Auth::user()->name }}<br>
+            Email: {{ Auth::user()->email}} 
+
+            
+
+          </a>
+            
           </div>
 
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
@@ -139,11 +152,7 @@
 
             @endif
             @else
-            <a id="navbar" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false" v-pre>
-              {{ Auth::user()->email}}
-
-            </a>
+           
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <a class="nav-link dropdown-toggle"" href=" {{ route('logout') }}" onclick="event.preventDefault();
@@ -193,15 +202,28 @@
       </nav>
       <!-- End Navbar -->
       <div class="container-auto" style="margin-top: 12% ; ">
+        
 
         @yield('content')
+        <footer class="footer" >
+          <div class="container-fluid">
+            <div class="row m-2">
 
+              <div class="credits ml-auto ">
+                <span class="copyright" style="color: rgb(24, 134, 230)">
+                  © 2022, made by Developer: Luis Hernando Soto Mesa
+                </span>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
 
 
 
 
     </div>
+    
   </div>
   <!--   Core JS Files   -->
   <script src="./assets/js/core/jquery.min.js"></script>
@@ -217,6 +239,8 @@
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
+        h1{
+            font-size: 40PX;
+        }
         table {
             font-size: 20px;
         }
@@ -17,7 +20,7 @@
 </head>
 
 <body>
-    <h1>lista de grados o programas en orden de creacion</h1>
+    <h1>LISTADO DE PROGRAMAS ACADEMICOS</h1>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-striped table-hover">

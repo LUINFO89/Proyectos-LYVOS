@@ -422,13 +422,13 @@ Copyright (c) 2015 Daniel Eden
     top: 1px; }
 
 .btn-primary {
-  background-color: #51cbce;
+  background-color:  #007965;
   color: #FFFFFF; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.active:focus, .btn-primary.active:hover,
   .show > .btn-primary.dropdown-toggle,
   .show > .btn-primary.dropdown-toggle:focus,
   .show > .btn-primary.dropdown-toggle:hover {
-    background-color: #34b5b8 !important;
+    background-color: #007965 !important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .btn-primary:not([data-action]):hover {
@@ -3065,7 +3065,7 @@ License - nucleoapp.com/license/
       font-size: 12px;
       padding: 10px 8px;
       line-height: 30px;
-      opacity: .7; }
+      opacity:  }
     .sidebar .nav li .nav > li > a,
     .off-canvas-sidebar .nav li .nav > li > a {
       padding: 5px 8px; }
@@ -3193,7 +3193,7 @@ License - nucleoapp.com/license/
   .sidebar:after,
   .off-canvas-sidebar:after {
     background: #66615B;
-    background: linear-gradient(#66615B 0%, #000 80%);
+    background: #007965;/*linear-gradient(#e08414 0%, #000 80%);*/
     z-index: 3; }
   .sidebar[data-color="white"]:after,
   .off-canvas-sidebar[data-color="white"]:after {

@@ -14,7 +14,7 @@
                             <span class="card-title">Show Grado</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('grados.index') }}"> Back</a>
+                            <a class="btn btn-secundary" href="{{ route('grados.index') }}"> Back</a>
                         </div>
                     </div>
 

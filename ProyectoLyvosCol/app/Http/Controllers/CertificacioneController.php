@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Alumno;
 use App\Models\Certificacione;
 use App\Models\Grado;
+use App\Models\Alumno;
 use Illuminate\Http\Request;
 use PDF;
-
 /**
  * Class CertificacioneController
  * @package App\Http\Controllers
@@ -26,17 +25,6 @@ class CertificacioneController extends Controller
         return view('certificacione.index', compact('certificaciones'))
             ->with('i', (request()->input('page', 1) - 1) * $certificaciones->perPage());
     }
-    public function downloadPdf()
-    {
-        $certificaciones = Certificacione::paginate();
-
-        view()->share('certificacione.pdf', $certificaciones);
-
-
-        $pdf = PDF::loadView('certificacione.pdf', ['certificaciones' => $certificaciones]);
-
-        return $pdf->stream();
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -47,10 +35,24 @@ class CertificacioneController extends Controller
     {
         $certificacione = new Certificacione();
 
-        $alumnos = Alumno::pluck('documentoIdentidadAlumno', 'id'); //sirve para mostrar el select del formulario
-        $grado = Grado::pluck('nombreGrado', 'id'); //sirve para mostrar el select del formulario
+        $grados = Grado::pluck('nombreGrado', 'id');//sirve para mostrar el select del formulario
+        $estudiante = Alumno::pluck('documentoIdentidadAlumno','id');
+        $nombre= Alumno::pluck('documentoIdentidadAlumno','id');
+       
+        return view('certificacione.create', compact('certificacione','grados','estudiante'));
+    }
+    public function downloadPdf()
+    {
+        $grados = Certificacione::paginate();
 
-        return view('certificacione.create', compact('certificacione', 'alumnos', 'grado'));
+        view()->share('certificacione.pdf', $grados);
+        
+        
+        $pdf = PDF::loadView('certificacione.pdf', ['certificaciones' => $grados])->setPaper('a4', 'landscape');
+
+        return $pdf->stream()
+        
+        ;
     }
 
     /**
@@ -78,11 +80,12 @@ class CertificacioneController extends Controller
     public function show($id)
     {
         $certificacione = Certificacione::find($id);
+        $grados = Grado::pluck('nombreGrado', 'id');//sirve para mostrar el select del formulario
+      
 
         return view('certificacione.show', compact('certificacione'));
     }
 
-  
     /**
      * Show the form for editing the specified resource.
      *
@@ -92,10 +95,12 @@ class CertificacioneController extends Controller
     public function edit($id)
     {
         $certificacione = Certificacione::find($id);
-        $alumnos = Alumno::pluck('documentoIdentidadAlumno', 'id'); //sirve para mostrar el select del formulario
-        $grado = Grado::pluck('nombreGrado', 'id'); //sirve para mostrar el select del formulario
+        $grados = Grado::pluck('nombreGrado', 'id');//sirve para mostrar el select del formulario
+        $estudiante = Alumno::pluck('documentoIdentidadAlumno','id');
+        $nombre= Alumno::pluck('documentoIdentidadAlumno','id');
 
-        return view('certificacione.edit', compact('certificacione', 'alumnos', 'grado'));
+
+        return view('certificacione.edit', compact('certificacione','grados','estudiante'));
     }
 
     /**

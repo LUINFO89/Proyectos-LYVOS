@@ -24,6 +24,7 @@ Usuario
                             data-placement="left">
                             {{ __('lista total de usuarios en pdf') }}
                         </a>
+                       
                     </div>
                 </div>
             </div>

@@ -18,8 +18,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property $anoCertificacionCertificaciones
  * @property $certificacionesGrado_id
  * @property $comentariosCertificaciones
- * @property $descargarReciboCertificaciones
- * @property $cargarReciboCertificaciones
  * @property $created_at
  * @property $updated_at
  *
@@ -32,7 +30,7 @@ class Certificacione extends Model
 {
     
     static $rules = [
-		'tipoIdentificacionCertificaciones' => 'required',
+		//'tipoIdentificacionCertificaciones' => 'required',
 		'documentoIdentidadAlumno_id' => 'required',
 		'nombresCertificaciones' => 'required',
 		'primerApellidoCertificaciones' => 'required',
@@ -49,7 +47,7 @@ class Certificacione extends Model
      *
      * @var array
      */
-    protected $fillable = ['tipoIdentificacionCertificaciones','documentoIdentidadAlumno_id','nombresCertificaciones','primerApellidoCertificaciones','segundoApellidoCertificaciones','correoElectronicoCertificaciones','tipodeCertificaciones','anoCertificacionCertificaciones','certificacionesGrado_id','comentariosCertificaciones','descargarReciboCertificaciones','cargarReciboCertificaciones'];
+    protected $fillable = ['tipoIdentificacionCertificaciones','documentoIdentidadAlumno_id','nombresCertificaciones','primerApellidoCertificaciones','segundoApellidoCertificaciones','correoElectronicoCertificaciones','tipodeCertificaciones','anoCertificacionCertificaciones','certificacionesGrado_id','comentariosCertificaciones'];
 
 
     /**

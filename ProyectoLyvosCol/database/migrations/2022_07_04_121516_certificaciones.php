@@ -26,9 +26,9 @@ return new class extends Migration
             $table->bigInteger('anoCertificacionCertificaciones');
             $table->bigInteger('certificacionesGrado_id')->unsigned();
             $table->string('comentariosCertificaciones')->nullable();
-            $table->string('descargarReciboCertificaciones')->nullable();
-            $table->string('cargarReciboCertificaciones')->nullable();
-  
+           
+
+
             $table->timestamps();
   
             $table->foreign('documentoIdentidadAlumno_id')->references('id')->on('alumnos')->onDelete('cascade');

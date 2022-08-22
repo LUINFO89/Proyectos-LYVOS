@@ -15,7 +15,7 @@ Solicitude
 
                     <div style="display: center;  align-items: center;">
 
-                        <span id="card_title " style="display:flex;  align-items: center; margin:5%  ;font-size: 30px; ">
+                        <span id="card_title " style="display:flex;  align-items: center; ;font-size: 30px; ">
                             {{ __('TIPO DE INFORME') }}
                         </span>
                         <!-- Example single danger button -->
@@ -54,11 +54,7 @@ Solicitude
                 </div>
                 @endif
 
-                <div class="card-body">
-                    <div class="table-responsive">
-
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>

@@ -7,24 +7,24 @@ Grados
 @section('content')
 <div class="row m-0">
     <div class="col-sm-12">
+       <h3> <i class="nc-icon nc-badge"></i>   {{ __('Listado de Grados ') }}</h3>
         <div class="card">
             <div class="card-header">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                    <span id="card_title">
-                        {{ __('Programas Academicos ') }}
-                    </span>
+                  
 
                     <div class="float-right">
                         <a href="{{ route('grados.create') }}" class="btn btn-primary btn-sm float-right"
                             data-placement="left">
-                            {{ __('Crear nuevo') }}
+                            {{ __('Crear nuevo grado') }}
                         </a>
-                        <a href="{{ route('download-pdf-grados') }}" class="btn btn-primary btn-sm float-right"
+                        
+                    </div>
+                    <a href="{{ route('download-pdf-grados') }}" class="btn btn-primary btn-sm float-right"
                             data-placement="left">
                             {{ __('lista total de grados en pdf') }}
                         </a>
-                    </div>
                 </div>
             </div>
             @if ($message = Session::get('success'))

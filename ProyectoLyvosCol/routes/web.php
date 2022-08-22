@@ -25,6 +25,11 @@ Route::resource('usuarios', App\Http\Controllers\UserController::class)->middlew
 Route::resource('grados', App\Http\Controllers\GradoController::class)->middleware('auth');
 Route::resource('solicitudes', App\Http\Controllers\SolicitudeController::class)->middleware('auth');
 Route::resource('alumnos', App\Http\Controllers\AlumnoController::class)->middleware('auth');
+Route::resource('profesores', App\Http\Controllers\ProfesoreController::class)->middleware('auth');
+Route::resource('notas', App\Http\Controllers\NotaController::class)->middleware('auth');
+Route::resource('asignaturas', App\Http\Controllers\AsignaturaController::class)->middleware('auth');
+
+
 Route::get('download-pdf-certificado/{id}', [App\Http\Controllers\CertificacioneController::class, 'downloadPdfcertificado'])->name('downloadPdfcertificado')->middleware( 'auth');
 
 

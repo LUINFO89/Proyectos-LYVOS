@@ -49,28 +49,12 @@
                             {{ $solicitude->tipodeCertificacionSolicitus }}
                         </div>
                         <div class="form-group">
-                            <strong>Anocertificacionsolicitud:</strong>
-                            {{ $solicitude->anoCertificacionSolicitud }}
+                            <strong>Anodeingreso:</strong>
+                            {{ $solicitude->anodeingreso }}
                         </div>
                         <div class="form-group">
                             <strong>Gradosolicitud:</strong>
                             {{ $solicitude->gradoSolicitud }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Otrossolicitud:</strong>
-                            {{ $solicitude->otrosSolicitud }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Comentariossolicitud:</strong>
-                            {{ $solicitude->comentariosSolicitud }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Descargarrecibo:</strong>
-                            {{ $solicitude->descargarRecibo }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Cargarrecibo:</strong>
-                            {{ $solicitude->cargarRecibo }}
                         </div>
 
                     </div>

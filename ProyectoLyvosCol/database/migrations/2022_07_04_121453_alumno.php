@@ -34,11 +34,13 @@ return new class extends Migration
             'B+','B-','O+','O-'])->nullable();
             $table->enum('generoAlumno', ['Masculino', 'Femenino'])->nullable();
             $table->bigInteger('grados_id')->unsigned()->nullable();
-  
+            $table->bigInteger('asignatura_id')->unsigned()->nullable();
+
             $table->timestamps();
   
             $table->foreign('grados_id')->references('id')->on('grados')->onDelete('cascade');
-       
+           // $table->foreign('asignatura_id')->references('id')->on('asignaturas')->onDelete('cascade');
+
             });
  
     }

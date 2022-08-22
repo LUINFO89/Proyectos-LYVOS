@@ -8,22 +8,22 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
+                <h3> <i class="nc-icon nc-circle-10"></i>   {{ __('Listado de Alumnos ') }}</h3>
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
-                                {{ __('Alumno') }}
-                            </span>
+                         
 
                              <div class="float-right">
                                 <a href="{{ route('alumnos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear nuevo Alumno ') }}
                                 </a>
-                                <a href="{{ route('download-pdf') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                    {{ __('pdf') }}
-                                  </a>
+                                
                               </div>
+                              <a href="{{ route('download-pdf') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                {{ __('Listado Generarl de alumnos en PDF') }}
+                              </a>
                              
                         </div>
                     </div>
@@ -32,6 +32,7 @@
                             <p>{{ $message }}</p>
                         </div>
                     @endif
+                   
 
                     <div class="card-body " >
                         <div class="table-responsive">
@@ -47,10 +48,7 @@
 										<th>Correo</th>
 										<th>Direccion</th>
 										<th>Telefono</th>
-										<th>Fecha Nacimiento</th>
-										<th>Lugar Nacimiento</th>
-										<th>RH</th>
-										<th>Genero</th>
+										
 										<th>Programa</th>
 
                                         <th></th>
@@ -68,11 +66,8 @@
 											<td>{{ $alumno->correoElectronicoAlumno }}</td>
 											<td>{{ $alumno->direccionAlumno }}</td>
 											<td>{{ $alumno->telefonoAlumno }}</td>
-											<td>{{ $alumno->fechadeNacimientoAlumno }}</td>
-											<td>{{ $alumno->lugarNacimientoAlumno }}</td>
-											<td>{{ $alumno->tipodeSangreAlumno }}</td>
-											<td>{{ $alumno->generoAlumno }}</td>
-											<td>{{ $alumno->grados_id }}</td>
+											
+											<td>{{ $alumno->grado->nombreGrado }}</td>
 
                                             <td>
                                                 <form action="{{ route('alumnos.destroy',$alumno->id) }}" method="POST">

@@ -23,12 +23,10 @@ return new class extends Migration
             $table->string('segundoApellidoSolicitud')->nullable();
             $table->string('correoElectronicoSolicitud')->nullable();
             $table->enum('tipodeCertificacionSolicitus', ['Certificado de estudios', 'Certificado de Notas','Boletines','Paz y salvo']);
-            $table->integer('anoCertificacionSolicitud');
-            $table->string('gradoSolicitud');
-            $table->string('otrosSolicitud')->nullable();
-            $table->string('comentariosSolicitud')->nullable();
-            $table->string('descargarRecibo')->nullable();
-            $table->string('cargarRecibo')->nullable();
+            $table->date('anodeingreso');
+            $table->bigInteger('gradoSolicitud')->unsigned()->nullable();
+            $table->foreign('gradoSolicitud')->references('id')->on('grados')->onDelete('cascade');
+
   
             $table->timestamps();
   

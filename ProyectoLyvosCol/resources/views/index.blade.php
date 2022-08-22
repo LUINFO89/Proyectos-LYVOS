@@ -30,15 +30,18 @@
   <link href="{{ asset('css/style.css')}}" rel="stylesheet" />
 </head>
 
-<body >
+<body  style="background-color:rgb(229, 240, 220)">
   <!-- Navbar Start -->
   <div class="container-fluid bg-light position-relative shadow">
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
       <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px">
         <img src="https://scontent.fbog3-2.fna.fbcdn.net/v/t1.6435-9/48373239_114628276247365_2485876652303712256_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEWgXwPNFVNJoRACHazKlYtH2Xva3v5EI0fZe9re_kQjVFFIkkvIyXfmJQQLg1nYSI51BxkUZgTEcyF9fZlGunt&_nc_ohc=Z-oWZBUixUEAX-e5s_4&tn=rZ7qVl0g5WuU4sV0&_nc_ht=scontent.fbog3-2.fna&oh=00_AT9R1jx4_-D0caTWrJl1P_GmciaOA-LwR2w_hzhM4JhPAQ&oe=62FFD16C" width="80px" alt="" style="border-radius: 100%">
         <!--i class="flaticon-043-teddy-bear"></i-->
-        <span class="text-primary">GuilFord</span>
+       
+      
       </a>
+      
+      <span class="text" style="color: #007965 " >Colegio Psicopedagógico Guilford</span>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -55,15 +58,15 @@
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
           @auth
           <!--a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a-->
-          <a href="{{ url('/home') }}" class="btn btn-primary px-4">Home</a>
+          <a href="{{ url('/home') }}" style="background-color: #007965" class="btn btn-primary px-4">Inicio</a>
 
           @else
           <!--a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a-->
-          <a href="{{ route('login') }}" class="btn btn-primary px-4">Log in</a>
+          <a href="{{ route('login') }}" style="background-color: #007965"class="btn btn-primary px-4">Iniciar Sesión</a>
 
           @if (Route::has('register'))
           <!--a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a-->
-          <a href="{{ route('register') }}" class="btn btn-primary px-4">Register</a>
+          <a href="{{ route('register') }}" style="background-color: #007965"class="btn btn-primary px-4">Registrarse</a>
 
           @endif
           @endauth
@@ -75,10 +78,10 @@
   <!-- Navbar End -->
 
   <!-- Header Start -->
-  <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+  <div class="container-fluid bg- px-0 px-md-5 mb-5" style="background-color: #007965 "  >
     <div class="row align-items-center px-3">
       <div class="col-lg-6 text-center text-lg-left">
-        <h4 class="text-white mb-4 mt-5 mt-lg-0">Centro de Aprendizaje para Ninos</h4>
+        <h4 class="text-white mb-4 mt-5 mt-lg-0">Centro de Aprendizaje para Niños</h4>
         <h1 class="display-3 font-weight-bold text-white">
           CEATIVIDAD INTELIGENCIA CONOCIMIENTO </h1>
         <p class="text-white mb-4">
