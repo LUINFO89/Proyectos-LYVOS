@@ -8,14 +8,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
+                <h3> <i class="nc-icon nc-app"></i>   {{ __('Listado de  Asignaturas') }}</h3>
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
-                                {{ __('Listado de  Asignaturas') }}
-                            </span>
-
+                           
                              <div class="float-right">
                                 <a href="{{ route('asignaturas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Crear nueva asignatura') }}

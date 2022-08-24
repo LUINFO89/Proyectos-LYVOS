@@ -8,14 +8,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
+                <h3> <i class="nc-icon nc-hat-3"></i>   {{ __('Listado de notas') }}</h3>
+
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
-                                {{ __('Nota') }}
-                            </span>
-
+                            
                              <div class="float-right">
                                 <a href="{{ route('notas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Ingresar Notas ') }}

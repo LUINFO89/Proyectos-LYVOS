@@ -9,14 +9,12 @@
         <div class="row">
             
             <div class="col-sm-12">
-                
+                <h3> <i class="nc-icon nc-money-coins"></i> {{ __('Listado de Certificaciones ') }}
+                </h3>
+
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-
-                            <span id="card_title">
-                                {{ __('Listado de Certificaciones ') }}
-                            </span>
 
                              <div class="float-right">
                                 <a href="{{ route('certificaciones.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">

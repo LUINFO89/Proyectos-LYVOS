@@ -35,7 +35,7 @@
   <div class="container-fluid bg-light position-relative shadow">
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
       <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px">
-        <img src="https://scontent.fbog3-2.fna.fbcdn.net/v/t1.6435-9/48373239_114628276247365_2485876652303712256_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEWgXwPNFVNJoRACHazKlYtH2Xva3v5EI0fZe9re_kQjVFFIkkvIyXfmJQQLg1nYSI51BxkUZgTEcyF9fZlGunt&_nc_ohc=Z-oWZBUixUEAX-e5s_4&tn=rZ7qVl0g5WuU4sV0&_nc_ht=scontent.fbog3-2.fna&oh=00_AT9R1jx4_-D0caTWrJl1P_GmciaOA-LwR2w_hzhM4JhPAQ&oe=62FFD16C" width="80px" alt="" style="border-radius: 100%">
+        <img src="../assets/img/logo.jpg"" width="80px" alt="" style="border-radius: 100%">
         <!--i class="flaticon-043-teddy-bear"></i-->
        
       

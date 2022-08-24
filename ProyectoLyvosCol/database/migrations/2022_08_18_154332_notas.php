@@ -25,12 +25,12 @@ return new class extends Migration
             $table->bigInteger('id_profesor')->unsigned()->nullable();
 
             $table->string('email_estudiante');
-            $table->integer('nota1');
-            $table->integer('nota2');
-            $table->integer('nota3');
-            $table->integer('nota4');
-            $table->integer('nota_final');
-            $table->string('estado');
+            $table->double('nota1');
+            $table->double('nota2');
+            $table->double('nota3');
+            $table->double('nota4');
+            $table->double('nota_final');
+            $table->double('estado');
             
             $table->foreign('id_asignatura_estudiante')->references('id')->on('asignaturas')->onDelete('cascade');
             $table->foreign('id_curso_estudiante')->references('id')->on('grados')->onDelete('cascade');

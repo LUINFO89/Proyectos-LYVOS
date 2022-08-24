@@ -16,7 +16,8 @@ Solicitude
                     <div style="display: center;  align-items: center;">
 
                         <span id="card_title " style="display:flex;  align-items: center; ;font-size: 30px; ">
-                            {{ __('TIPO DE INFORME') }}
+                            <i class="nc-icon nc-paper"></i>
+                            {{ __('IMPRIMIR ESTADISTICOS') }}
                         </span>
                         <!-- Example single danger button -->
                         <div class="dropdown " >

@@ -9,18 +9,21 @@
         <div class="row">
            
             <div class="col-sm-12">
+                <h3> <i class="nc-icon nc-bullet-list-67"></i>   {{ __('Seleccione') }}</h3>
+
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             
-                            <div class="float-right" style="margin-right: 80%">
-                                <a href="{{ route('certificaciones.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="right">
+                            <div class="float-center" style="margin-right: 80%">
+                                <a href="{{ route('certificaciones.create') }}" class="btn  btn-sm float-right"  data-placement="right">
                                     <i class="nc-icon nc-paper"></i>
 
                                     {{ __('Generar Nueva Certificación') }}
                                 </a>
-                                <a href="{{ route('certificaciones.index') }}" class="btn btn-primary btn-sm "  data-placement="">
+            
+                                  <a href="{{ route('certificaciones.index') }}" class="btn btn-primary btn-sm "  data-placement="">
                                     <i class="nc-icon nc-hat-3"></i>
                                     {{ __('Consultar Certificaciones realizadas') }}
                                   </a>

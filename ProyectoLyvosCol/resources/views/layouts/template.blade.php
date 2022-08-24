@@ -65,13 +65,13 @@
           </li>
           <li class=" ">
             <a href="{{ route('asignaturas.index') }}" >
-              <i class="nc-icon nc-hat-3"></i>
+              <i class="nc-icon nc-app"></i>
               <p>Asignaturas</p>
             </a>
           </li>
           <li class=" ">
             <a href="{{ route('notas.index') }}" >
-              <i class="nc-icon nc-hat-3"></i>
+              <i class="nc-icon nc-book-bookmark"></i>
               <p>Notas</p>
             </a>
           </li>
@@ -84,7 +84,7 @@
           </li>
           <li class=" ">
             <a href="{{ route('certificaciones.index') }}" >
-              <i class="nc-icon nc-hat-3"></i>
+              <i class="nc-icon nc-money-coins"></i>
               <p>Certificaciones</p>
             </a>
           </li>
@@ -94,10 +94,7 @@
               <p>Imprimir estadisticos</p>
             </a>
           </li>
-          
 
-
-          
           <li class=" ">
             <a href="{{ route('NewPassword') }}" >
               <i class="nc-icon nc-settings"></i>
@@ -127,10 +124,12 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
+            
             <a id="navbar" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false" v-pre>
             Nombre: {{ Auth::user()->name }}<br>
             Email: {{ Auth::user()->email}} 
+            
 
             
 
