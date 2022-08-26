@@ -18,10 +18,11 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('notas.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
-
+                            
                             @include('nota.form')
 
                         </form>
+                     
                     </div>
                 </div>
             </div>

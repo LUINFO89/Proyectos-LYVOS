@@ -49,5 +49,4 @@ Route::get('download-pdf-user', [App\Http\Controllers\UserController::class, 'do
 
 
 
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -34,7 +34,7 @@ class Nota extends Model
 {
     
     static $rules = [
-		'nombre_estudiante' => 'required',
+		/*'nombre_estudiante' => 'required',
 		'id_identidad_alumno' => 'required',
 		'email_estudiante' => 'required',
 		'nota1' => 'required',
@@ -42,7 +42,7 @@ class Nota extends Model
 		'nota3' => 'required',
 		'nota4' => 'required',
 		'nota_final' => 'required',
-		'estado' => 'required',
+		'estado' => 'required',*/
     ];
 
     protected $perPage = 20;

@@ -19,11 +19,13 @@
                                 <a href="{{ route('notas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Ingresar Notas ') }}
                                 </a>
-                              </div>
+                               
                               <a href="{{ route('notas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                 {{ __('Imprimir listado de Notas en PDF ') }}
                               </a>
+
                         </div>
+                       
                     </div>
                     @if ($message = Session::get('success'))
                         <div class="alert alert-success">
@@ -82,6 +84,23 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            <div class="card-body">
+                                @if (isset($errors) && $errors->any())
+                                <div class="alert alert-danger" role="alert">
+                                    @foreach ($errors->all() as $error)
+                                    {{$error}}
+                                    @endforeach
+                                </div>
+                                @endif
+            
+                                <form action="{{route('notas.store')}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+            
+                                    <input type="file" name="import_file" />
+            
+                                    <button class="btn btn-primary" type="submit">Importar</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

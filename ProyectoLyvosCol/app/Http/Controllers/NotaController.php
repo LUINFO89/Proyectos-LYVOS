@@ -8,6 +8,9 @@ use App\Models\Profesore;
 use App\Models\Grado;
 use App\Models\Asignatura;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\NotasImport;
+
 
 /**
  * Class NotaController
@@ -51,7 +54,7 @@ class NotaController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    /*public function store(Request $request)
     {
         request()->validate(Nota::$rules);
 
@@ -59,7 +62,20 @@ class NotaController extends Controller
 
         return redirect()->route('notas.index')
             ->with('success', 'Nota created successfully.');
+
+    }*/
+
+    public function store(Request $request)
+    {
+        //$headings = (new HeadingRowImport)->toArray('C:/notas.xlsx');
+
+        $file = $request->file('import_file');
+
+        Excel::import(new NotasImport, $file);
+
+        return redirect()->route('notas.index')->with('success', 'Productos importados exitosamente');
     }
+    
 
     /**
      * Display the specified resource.
