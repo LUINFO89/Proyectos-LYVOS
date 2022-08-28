@@ -30,12 +30,11 @@
       <div class="logo">
          
         </a>
-        <a href="https://luiguie.jimdofree.com/" class="simple-text logo-normal" style="font-size: 11px">
-          Colegio Psicopedagógico Guilford
-           <div class="logo-image" style="margin-left: 30%">
-            <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=320x10000:format=png/path/s8b6a8e799386383b/image/i158ea38c76baa615/version/1612487596/image.png" style="width: 50%">
-          </div> 
-        </a>
+        <div class="logo-image" style="margin-left: 20%" >
+          <img src="../assets/img/logo2.jpg "  style="width:70%;border-radius: 100%" >
+        </div> 
+        <h7> Gimnasio Psicopedagógico Guilford </h7>
+       
       </div>
       <div class="sidebar-wrapper" >
         <ul class="nav">
@@ -45,12 +44,15 @@
               <p>Dashboard</p>
             </a>
           </li>
+          <hr>
+          @can('grados.index','alumnos.index','profesores.index','asignaturas.index','asignaturas.index')
           <li class="">
             <a href="{{ route('grados.index') }}" >
               <i class="nc-icon nc-badge"></i>
               <p>Grados</p>
             </a>
           </li>
+         
           <li class=" ">
             <a href="{{ route('alumnos.index') }}" >
               <i class="nc-icon nc-circle-10"></i>
@@ -69,13 +71,16 @@
               <p>Asignaturas</p>
             </a>
           </li>
+          @endcan
+          @can('calificaciones.index')
           <li class=" ">
-            <a href="{{ route('notas.index') }}" >
+            <a href="{{ route('calificaciones.index') }}" >
               <i class="nc-icon nc-book-bookmark"></i>
-              <p>Notas</p>
+              <p>Calificaciones</p>
             </a>
           </li>
-          
+          <hr>
+          @endcan
           <li class=" ">
             <a href="{{ route('solicitudes.index') }}" >
               <i class="nc-icon nc-bullet-list-67"></i>
@@ -88,12 +93,14 @@
               <p>Certificaciones</p>
             </a>
           </li>
+        
           <li class=" ">
             <a href="{{ route('informes.index') }}" >
               <i class="nc-icon nc-paper"></i>
               <p>Imprimir estadisticos</p>
             </a>
           </li>
+          <hr>
 
           <li class=" ">
             <a href="{{ route('NewPassword') }}" >
@@ -107,7 +114,7 @@
               <p>Usuarios</p>
             </a>
           </li>
-         
+        
         </ul>
       </div>
     </div>
@@ -124,16 +131,19 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            
+            <div class="logo-image" style="margin-left: 30PX">
+              <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=320x10000:format=png/path/s8b6a8e799386383b/image/i158ea38c76baa615/version/1612487596/image.png" style="width: 50PX">
+            </div> 
             <a id="navbar" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false" v-pre>
             Nombre: {{ Auth::user()->name }}<br>
             Email: {{ Auth::user()->email}} 
-            
-
-            
-
           </a>
+        
+          
+                      
+          
+          
             
           </div>
 

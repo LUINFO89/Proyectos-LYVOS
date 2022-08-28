@@ -1,34 +1,67 @@
+
 <?php
 
-namespace App\Imports;
-
-use App\Models\Nota;
-use App\Imports\NotasImport;
+use App\Models\Notas;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithBatchInserts;
+use Maatwebsite\Excel\Concerns\WithChunkReading;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Maatwebsite\Excel\Concerns\WithValidation;
 
-
-class NotasImport implements ToModel
+class NotasImport implements ToModel, WithHeadingRow, WithBatchInserts, WithChunkReading, WithValidation
 {
+   
+    /**
+     * @param array $row
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
     public function model(array $row)
     {
-        return new Nota([
-            'id' => $row[0],
-            'nombre_estudiante' => $row[1],
-            'id_identidad_alumno'=>$row[2],
-            'email_estudiante' => $row[6],
-            'nota1'=>$row[7],
-            'nota2'=>$row[8],
-            'nota3'=>$row[9],
-            'nota4'=>$row[10],
-            'nota_final'=>$row[11],
-            'estado'=>$row[12],
+        return new Notas([
+           // 'name' => $row['producto'],
+           // 'description' => $row['descripcion'],
+            //'price' => $row['precio'],
+            //'quantity_left' => $row['en_inventario'],
+            //'category_id' => 1,
+            //'category_id' => $this->categories[$row['categoria']]
+            
+            'nombre_estudiante' => $row['nombre'],
+            'email_estudiante' => $row['email'],
+            'nota1'=>$row['nota1'],   
+            'nota2'=>$row['nota2'],
+            'nota3'=>$row['nota3'],
+            'nota4'=>$row['nota4'],
+            'nota_final'=>$row['nota_final'],
+            'estado'=>$row['estado'],
             
 
         ]);
     }
+
+    public function batchSize(): int
+    {
+        return 4000;
+    }
+
+    public function chunkSize(): int
+    {
+        return 4000;
+    }
+
+    public function rules(): array
+    {
+        return [
+            '*.nota_final' => [
+                'double',
+                'required'
+            ],
+            '*.email' => [
+                'varchar',
+                'required'
+            ]
+        ];
+    }
 }
-
-
-
 
 

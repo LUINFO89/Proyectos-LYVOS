@@ -19,9 +19,10 @@
                                   {{ __('Crear nueva asignatura') }}
                                 </a>
                               </div>
-                              <a href="{{ route('asignaturas.create') }}" class="btn btn-secundary btn-sm float-right"  data-placement="left">
-                                {{ __('Listar asignaturas en PDF') }}
+                              <a href="{{ route('download-pdf-asignatura') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                {{ __('Listado Generarl en PDF') }}
                               </a>
+                              
                         </div>
                     </div>
                     @if ($message = Session::get('success'))

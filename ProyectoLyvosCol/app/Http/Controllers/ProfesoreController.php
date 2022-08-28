@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profesore;
 use Illuminate\Http\Request;
+use PDF;
 
 /**
  * Class ProfesoreController
@@ -105,5 +106,17 @@ class ProfesoreController extends Controller
 
         return redirect()->route('profesores.index')
             ->with('success', 'Profesore deleted successfully');
+    }
+    public function downloadPdf()
+    {
+        $profesores = Profesore::paginate();
+
+       view()->share('profesor.pdf',$profesores);
+       
+
+        $pdf = PDF::loadView('profesore.pdf', ['profesores' => $profesores])->setPaper('a4', 'landscape');
+
+        //return $pdf->download('alumnos.pdf');
+        return $pdf->stream();
     }
 }

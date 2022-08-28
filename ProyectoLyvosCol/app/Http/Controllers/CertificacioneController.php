@@ -54,6 +54,19 @@ class CertificacioneController extends Controller
         
         ;
     }
+    public function downloadPdfall()
+    {
+        $grados = Certificacione::paginate();
+
+        view()->share('certificacione.pdf2', $grados);
+        
+        
+        $pdf = PDF::loadView('certificacione.pdf2', ['certificaciones' => $grados])->setPaper('a4', 'landscape');
+
+        return $pdf->stream()
+        
+        ;
+    }
 
     /**
      * Store a newly created resource in storage.

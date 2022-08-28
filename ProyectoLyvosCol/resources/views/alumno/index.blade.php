@@ -22,7 +22,7 @@
                                 
                               </div>
                               <a href="{{ route('download-pdf') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                {{ __('Listado Generarl de alumnos en PDF') }}
+                                {{ __('Listado Generarl en PDF') }}
                               </a>
                              
                         </div>

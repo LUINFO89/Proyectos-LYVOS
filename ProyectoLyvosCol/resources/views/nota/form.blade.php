@@ -21,16 +21,8 @@
             {{ Form::select('id_identidad_alumno',$estudiante_id,  $nota->id_identidad_alumno, ['class' => 'form-control' . ($errors->has('id_identidad_alumno') ? ' is-invalid' : ''), 'placeholder' => 'Id Identidad Alumno']) }}
             {!! $errors->first('id_identidad_alumno', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('id_profesor') }}
-            {{ Form::select('id_profesor',$profesor,  $nota->id_profesor, ['class' => 'form-control' . ($errors->has('id_profesor') ? ' is-invalid' : ''), 'placeholder' => 'Id Profesor']) }}
-            {!! $errors->first('id_profesor', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('email_estudiante') }}
-            {{ Form::text('email_estudiante', $nota->email_estudiante, ['class' => 'form-control' . ($errors->has('email_estudiante') ? ' is-invalid' : ''), 'placeholder' => 'Email Estudiante']) }}
-            {!! $errors->first('email_estudiante', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+     
+      
         <div class="form-group">
             {{ Form::label('nota1') }}
             {{ Form::text('nota1', $nota->nota1, ['class' => 'form-control' . ($errors->has('nota1') ? ' is-invalid' : ''), 'placeholder' => 'Nota1']) }}

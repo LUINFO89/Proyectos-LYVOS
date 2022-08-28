@@ -36,7 +36,7 @@ class AlumnoController extends Controller
        view()->share('alumno.pdf',$alumnos);
        
 
-        $pdf = PDF::loadView('alumno.pdf', ['alumnos' => $alumnos]);
+        $pdf = PDF::loadView('alumno.pdf', ['alumnos' => $alumnos])->setPaper('a4', 'landscape');
 
         //return $pdf->download('alumnos.pdf');
         return $pdf->stream();

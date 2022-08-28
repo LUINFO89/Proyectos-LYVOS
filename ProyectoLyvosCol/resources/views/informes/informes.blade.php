@@ -32,18 +32,27 @@ Solicitude
                                     data-placement="left">
                                     {{ __('2. Informe Total de Grados') }}
                                 </a>
-                                <a href="{{ route('download-pdf-solicitudes') }}" class="dropdown-item" style="font-size: 18px"
+                                <a href="{{ route('download-pdf-profesores') }}" class="dropdown-item" style="font-size: 18px"
                                     data-placement="left">
-                                    {{ __('3. Informe Total de Solicitudes ') }}
+                                    {{ __('3. Informe Total de profesores ') }}
+                                </a>
+                                <a href="{{ route('download-pdf-asignatura') }}" class="dropdown-item" style="font-size: 18px"
+                                data-placement="left">
+                                    {{ __('4    . Informe Total de asignatura ') }}
+                                </a>
+                                <a href="{{ route('download-pdf-certificaciones-all') }}" class="dropdown-item" style="font-size: 18px"
+                                data-placement="left">
+                                    {{ __('5    . Informe Total de calificaciones ') }}
                                 </a>
                                 <a href="{{ route('download-pdf-certificaciones') }}" class="dropdown-item" style="font-size: 18px"
                                 data-placement="left">
-                                    {{ __('4. Informe Total de certificaciones ') }}
+                                    {{ __('6. Informe Total de certificaciones ') }}
                                 </a>
                                 <a href="{{ route('download-pdf-users') }}" class="dropdown-item" style="font-size: 18px"
                                 data-placement="left">
-                                    {{ __('5    . Informe Total de Usuarios ') }}
+                                    {{ __('7    . Informe Total de Usuarios ') }}
                                 </a>
+                                
                             </div>
                         </div>
 

@@ -20,8 +20,8 @@
                                   {{ __('Crear nuevo Docente') }}
                                 </a>
                               </div>
-                              <a href="{{ route('profesores.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                {{ __('Listado de profesores en PDF') }}
+                              <a href="{{ route('download-pdf-profesores') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                {{ __('Listado Generarl en PDF') }}
                               </a>
                         </div>
                     </div>

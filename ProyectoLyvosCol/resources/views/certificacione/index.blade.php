@@ -21,7 +21,7 @@
                                   {{ __('Crear nueva certificación') }}
                                 </a>
                               </div>
-                              <a href="{{ route('certificaciones.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                              <a href="{{ url('download-pdf-certificaciones-all') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                 {{ __('Listado de certificaciones en PDF') }}
                               </a>
                         </div>
@@ -45,7 +45,6 @@
 										<th>Nombres</th>
 										<th>Primer Apellido</th>
 										<th>Segundo Apellido</th>
-										<th>Correo</th>
                                         <th>Año de Ingreso</th>
 										<th>Tipo de Certificación</th>
 										<th>Curso o carrera</th>
@@ -63,7 +62,6 @@
 											<td>{{ $certificacione->nombresCertificaciones }}</td>
 											<td>{{ $certificacione->primerApellidoCertificaciones }}</td>
 											<td>{{ $certificacione->segundoApellidoCertificaciones }}</td>
-											<td>{{ $certificacione->correoElectronicoCertificaciones }}</td>
                                             <td>{{ $certificacione->anoCertificacionCertificaciones }}</td>
 
 											<td>{{ $certificacione->tipodeCertificaciones }}</td>
@@ -71,6 +69,7 @@
 											
 
                                             <td>
+                                                @can('certificaciones.destroy')
                                                 <form action="{{ route('certificaciones.destroy',$certificacione->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-success" href="{{ route('certificaciones.edit',$certificacione->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     
@@ -79,6 +78,7 @@
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
+                                                @endcan
                                                 <a href="{{ route('download-pdf-certificaciones') }}" class="btn btn-primary btn-sm float-right"
                                                     data-placement="left">
                                                     {{ __('Recibo de pago') }}

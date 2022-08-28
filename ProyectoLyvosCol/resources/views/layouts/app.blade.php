@@ -80,6 +80,15 @@
                                     @csrf
                                 </form>
                             </div>
+                            <div class="card border-danger mx-sm-1 p3">
+                            
+                                <div class="text-danger text-center mt-3"><h4> Grados </h4></div>
+                                    <a href="{{ route('products.index') }}" >
+                                      <i class="nc-icon nc-badge"></i>
+                                      <p>productos</p>
+                                    </a>
+                                  
+                            </div>
                         </li>
                         @endguest
                     </ul>

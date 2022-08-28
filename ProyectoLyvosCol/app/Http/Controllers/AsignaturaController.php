@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use App\Models\Asignatura;
 use Illuminate\Http\Request;
 use App\Models\Profesore;
+use PDF;
+
 
 /**
  * Class AsignaturaController
@@ -112,5 +114,17 @@ class AsignaturaController extends Controller
 
         return redirect()->route('asignaturas.index')
             ->with('success', 'Asignatura deleted successfully');
+    }
+    public function downloadPdf()
+    {
+        $obj = Asignatura::paginate();
+
+       view()->share('asignatura.pdf',$obj);
+       
+
+        $pdf = PDF::loadView('asignatura.pdf', ['asignaturas' => $obj])->setPaper('a4', 'landscape');
+
+        //return $pdf->download('alumnos.pdf');
+        return $pdf->stream();
     }
 }

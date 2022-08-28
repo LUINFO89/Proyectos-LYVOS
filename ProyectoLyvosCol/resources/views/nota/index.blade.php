@@ -42,7 +42,7 @@
                                         
 										
 										<th>Asignatura</th>
-                                        <th>Profesor</th>
+                                        
 										<th>Curso</th>
 										<th>Nombres</th>
 										<th>Nota1</th>
@@ -61,8 +61,8 @@
                                             <td>{{ ++$i }}</td>
                                             
                                             <td>{{ $nota->asignatura->nombre_asignatura }}</td>
-                                            <td>{{ $nota->profesore->nombre_profesores }}</td>
-                                            <td>{{ $nota->grado->nombreGrado }}</td>
+                                           
+                                            
 											<td>{{ $nota->alumno->nombresAlumno }}</td>
 											<td>{{ $nota->nota1 }}</td>
 											<td>{{ $nota->nota2 }}</td>
@@ -93,7 +93,7 @@
                                 </div>
                                 @endif
             
-                                <form action="{{route('notas.store')}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('calificaciones.store')}}" method="POST" enctype="multipart/form-data">
                                     @csrf
             
                                     <input type="file" name="import_file" />

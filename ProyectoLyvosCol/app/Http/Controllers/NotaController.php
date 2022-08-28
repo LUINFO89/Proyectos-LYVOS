@@ -54,18 +54,18 @@ class NotaController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    /*public function store(Request $request)
+    public function store(Request $request)
     {
         request()->validate(Nota::$rules);
 
         $nota = Nota::create($request->all());
 
         return redirect()->route('notas.index')
-            ->with('success', 'Nota created successfully.');
+            ->with('success', 'Nota created Correctamente.');
 
-    }*/
+    }
 
-    public function store(Request $request)
+  /*  public function store(Request $request)
     {
         //$headings = (new HeadingRowImport)->toArray('C:/notas.xlsx');
 
@@ -74,7 +74,7 @@ class NotaController extends Controller
         Excel::import(new NotasImport, $file);
 
         return redirect()->route('notas.index')->with('success', 'Productos importados exitosamente');
-    }
+    }*/
     
 
     /**

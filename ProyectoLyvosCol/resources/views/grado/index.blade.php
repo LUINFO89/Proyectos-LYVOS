@@ -15,8 +15,11 @@ Grados
                   
 
                     <div class="float-right">
+                        
                         <a href="{{ route('grados.create') }}" class="btn btn-primary btn-sm float-right"
                             data-placement="left">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+
                             {{ __('Crear nuevo grado') }}
                         </a>
                         
@@ -57,7 +60,7 @@ Grados
                                 <td>
                                     <form action="{{ route('grados.destroy',$grado->id) }}" method="POST">
                                         <a class="btn btn-sm btn-primary "
-                                            href="{{ route('grados.show',$grado->id) }}"><i class="fa fa-fw fa-eye"></i>
+                                            href="{{ route('grados.show',$grado->id) }}"><i class="nc-bullet-list-67"></i>
                                             Ver </a>
                                         <a class="btn btn-sm btn-success"
                                             href="{{ route('grados.edit',$grado->id) }}"><i

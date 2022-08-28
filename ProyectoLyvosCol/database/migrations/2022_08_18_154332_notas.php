@@ -22,9 +22,7 @@ return new class extends Migration
             $table->bigInteger('id_asignatura_estudiante')->unsigned()->nullable();
             $table->bigInteger('id_curso_estudiante')->unsigned()->nullable();
             $table->biginteger('id_identidad_alumno')->unsigned();
-            $table->bigInteger('id_profesor')->unsigned()->nullable();
 
-            $table->string('email_estudiante');
             $table->double('nota1');
             $table->double('nota2');
             $table->double('nota3');
@@ -35,7 +33,6 @@ return new class extends Migration
             $table->foreign('id_asignatura_estudiante')->references('id')->on('asignaturas')->onDelete('cascade');
             $table->foreign('id_curso_estudiante')->references('id')->on('grados')->onDelete('cascade');
             $table->foreign('id_identidad_alumno')->references('id')->on('alumnos')->onDelete('cascade');
-            $table->foreign('id_profesor')->references('id')->on('profesores')->onDelete('cascade');
 
             $table->timestamps();
         });
