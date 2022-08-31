@@ -49,7 +49,7 @@ class ProfesoreController extends Controller
         $profesore = Profesore::create($request->all());
 
         return redirect()->route('profesores.index')
-            ->with('success', 'Profesore created successfully.');
+        ->with('Excelente', 'El objeto fue creado correctamente .');
     }
 
     /**
@@ -92,7 +92,7 @@ class ProfesoreController extends Controller
         $profesore->update($request->all());
 
         return redirect()->route('profesores.index')
-            ->with('success', 'Profesore updated successfully');
+        ->with('Excelente', 'El objeto fue actualizado correctamente .');
     }
 
     /**
@@ -105,7 +105,7 @@ class ProfesoreController extends Controller
         $profesore = Profesore::find($id)->delete();
 
         return redirect()->route('profesores.index')
-            ->with('success', 'Profesore deleted successfully');
+        ->with('Excelente', 'El objeto fue eliminado correctamente .');
     }
     public function downloadPdf()
     {

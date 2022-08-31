@@ -51,7 +51,7 @@ class CalificacioneController extends Controller
         $calificacione = Calificacione::create($request->all());
 
         return redirect()->route('calificaciones.index')
-            ->with('success', 'calificaciones created successfully.');
+        ->with('Excelente', 'El objeto fue creado correctamente .');
     }
 
     
@@ -104,7 +104,7 @@ class CalificacioneController extends Controller
         $calificacione->update($request->all());
 
         return redirect()->route('calificaciones.index')
-            ->with('success', 'Calificacione updated successfully');
+        ->with('Excelente', 'El objeto fue actualizado correctamente .');
     }
 
     /**
@@ -117,7 +117,7 @@ class CalificacioneController extends Controller
         $calificacione = Calificacione::find($id)->delete();
 
         return redirect()->route('calificaciones.index')
-            ->with('success', 'Calificacione deleted successfully');
+        ->with('Excelente', 'El objeto fue eliminado correctamente .');
     }
     public function downloadPdf()
     {

@@ -48,7 +48,7 @@ class CategoryController extends Controller
         $category = Category::create($request->all());
 
         return redirect()->route('categories.index')
-            ->with('success', 'Category created successfully.');
+        ->with('Excelente', 'El objeto fue creado correctamente .');
     }
 
     /**
@@ -91,7 +91,7 @@ class CategoryController extends Controller
         $category->update($request->all());
 
         return redirect()->route('categories.index')
-            ->with('success', 'Category updated successfully');
+        ->with('Excelente', 'El objeto fue actualizado correctamente .');
     }
 
     /**
@@ -104,6 +104,6 @@ class CategoryController extends Controller
         $category = Category::find($id)->delete();
 
         return redirect()->route('categories.index')
-            ->with('success', 'Category deleted successfully');
+        ->with('Excelente', 'El objeto fue eliminado correctamente .');
     }
 }

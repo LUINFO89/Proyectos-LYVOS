@@ -60,7 +60,7 @@ class GradoController extends Controller
         $grado = Grado::create($request->all());
 
         return redirect()->route('grados.index')
-            ->with('success', 'Grado created successfully.');
+        ->with('Excelente', 'El objeto fue creado correctamente .');
     }
 
     /**
@@ -103,7 +103,7 @@ class GradoController extends Controller
         $grado->update($request->all());
 
         return redirect()->route('grados.index')
-            ->with('success', 'Grado updated successfully');
+        ->with('Excelente', 'El objeto fue actualizado correctamente .');
     }
 
     /**
@@ -116,6 +116,6 @@ class GradoController extends Controller
         $grado = Grado::find($id)->delete();
 
         return redirect()->route('grados.index')
-            ->with('success', 'Grado deleted successfully');
+        ->with('Excelente', 'El objeto fue eliminado correctamente .');
     }
 }

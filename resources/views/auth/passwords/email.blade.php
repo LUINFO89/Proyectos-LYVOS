@@ -24,7 +24,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <title>Restaurar Contraseña</title>
+    
 </head>
+
 <body style="background-color: #007965">
 
     <div class="container" style="margin-top: 10%">    
@@ -32,6 +34,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Restaurar Contraseña') }}</div>
+
 
                 <div class="card-body">
                     @if (session('status'))
@@ -63,10 +66,15 @@
                                     {{ __('Enviar correo de restablecimiento') }}
                                 </button>
                             </div>
+
                         </div>
+                        
                     </form>
+                    
                 </div>
             </div>
+            <p style="color: aliceblue ;font-size:12px" >En caso de olvidar correo de confirmación : Favor comunicarse con el administrador del sistema al correo admin@gimnasioguilford.com.</p>
+
         </div>
     </div>
 </div>

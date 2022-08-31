@@ -81,7 +81,7 @@ class CertificacioneController extends Controller
         $certificacione = Certificacione::create($request->all());
 
         return redirect()->route('certificaciones.index')
-            ->with('success', 'Certificacione created successfully.');
+        ->with('Excelente', 'El objeto fue creado correctamente .');
     }
 
     /**
@@ -130,7 +130,7 @@ class CertificacioneController extends Controller
         $certificacione->update($request->all());
 
         return redirect()->route('certificaciones.index')
-            ->with('success', 'Certificacione updated successfully');
+        ->with('Excelente', 'El objeto fue actualizado correctamente .');
     }
 
     /**
@@ -143,6 +143,6 @@ class CertificacioneController extends Controller
         $certificacione = Certificacione::find($id)->delete();
 
         return redirect()->route('certificaciones.index')
-            ->with('success', 'Certificacione deleted successfully');
+        ->with('Excelente', 'El objeto fue eliminado correctamente .');
     }
 }

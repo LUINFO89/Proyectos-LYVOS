@@ -73,11 +73,11 @@
 
                                             <td>
                                                 <form action="{{ route('notas.destroy',$nota->id) }}" method="POST" >
-                                                    <a class="btn btn-sm btn-primary " style="width: 90%"href="{{ route('notas.show',$nota->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success"style="width: 90%"href="{{ route('notas.edit',$nota->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " style="width: 90%"href="{{ route('notas.show',$nota->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success"style="width: 90%"href="{{ route('notas.edit',$nota->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm" style="width: 90%"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="Enviar" class="btn btn-danger btn-sm" style="width: 90%"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

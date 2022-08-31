@@ -66,7 +66,7 @@ class AlumnoController extends Controller
         $alumno = Alumno::create($request->all());
 
         return redirect()->route('alumnos.index')
-            ->with('success', 'Alumno created successfully.');
+            ->with('Excelente', 'El objeto fue creado correctamente .');
     }
 
     /**
@@ -111,7 +111,7 @@ class AlumnoController extends Controller
         $alumno->update($request->all());
 
         return redirect()->route('alumnos.index')
-            ->with('success', 'Alumno updated successfully');
+        ->with('Excelente', 'El objeto fue Actualizado correctamente .');
     }
 
     /**
@@ -124,6 +124,6 @@ class AlumnoController extends Controller
         $alumno = Alumno::find($id)->delete();
 
         return redirect()->route('alumnos.index')
-            ->with('success', 'Alumno deleted successfully');
+        ->with('Excelente', 'El objeto fue Eliminado correctamente .');
     }
 }

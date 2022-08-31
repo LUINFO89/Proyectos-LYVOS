@@ -3,9 +3,10 @@
 @section('content')
 
 <div class="content">
-    <div class="row m-0" >
+  
+    <div class="row m-1" >
         <div class="col-md-12">
-            <div class="card">
+            <div class="card" style="margin-top: 10%">
 
                 <div class="card-body">
                     @if (session('status'))
@@ -41,7 +42,7 @@
                                 <hr>
                                 <div class="stats">
                                   <i class="fa fa-refresh"></i>
-                                  Update Now
+                                  Actualizado ahora 
                                 </div>
                               </div>
                             </div>
@@ -72,7 +73,7 @@
                                 <hr>
                                 <div class="stats">
                                   <i class="fa fa-calendar-o"></i>
-                                  Last day
+                                  Último día
                                 </div>
                               </div>
                             </div>
@@ -98,7 +99,7 @@
                                 <hr>
                                 <div class="stats">
                                   <i class="fa fa-clock-o"></i>
-                                  In the last hour
+                                  En la última hora
                                 </div>
                               </div>
                             </div>
@@ -124,7 +125,7 @@
                                 <hr>
                                 <div class="stats">
                                   <i class="fa fa-refresh"></i>
-                                  Update now
+                                  En la última hora
                                 </div>
                               </div>
                             </div>

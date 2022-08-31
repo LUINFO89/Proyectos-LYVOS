@@ -54,7 +54,7 @@ class AsignaturaController extends Controller
         $asignatura = Asignatura::create($request->all());
 
         return redirect()->route('asignaturas.index')
-            ->with('success', 'Asignatura created successfully.');
+        ->with('Excelente', 'El objeto fue creado correctamente .');
     }
 
     /**
@@ -100,7 +100,7 @@ class AsignaturaController extends Controller
         $asignatura->update($request->all());
 
         return redirect()->route('asignaturas.index')
-            ->with('success', 'Asignatura updated successfully');
+        ->with('Excelente', 'El objeto fue actualizado correctamente .');
     }
 
     /**
@@ -113,7 +113,7 @@ class AsignaturaController extends Controller
         $asignatura = Asignatura::find($id)->delete();
 
         return redirect()->route('asignaturas.index')
-            ->with('success', 'Asignatura deleted successfully');
+        ->with('Excelente', 'El objeto fue eliminado correctamente .');
     }
     public function downloadPdf()
     {

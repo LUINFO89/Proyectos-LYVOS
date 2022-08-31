@@ -39,7 +39,7 @@ class RoleSeeder extends Seeder
         Permission ::create(['name'=> 'certificados.show'])->syncRoles([$profesor,$alumno,$manager,$developer]);
         Permission ::create(['name'=> 'certificados.create'])->syncRoles([$profesor,$alumno,$manager,$developer]);
         Permission ::create(['name'=> 'certificados.edit'])->syncRoles([$profesor,$alumno,$manager,$developer]);
-        Permission ::create(['name'=> 'certificados.destroy'])->syncRoles([$profesor,$alumno,$manager,$developer]);
+        Permission ::create(['name'=> 'certificados.destroy'])->syncRoles([$profesor,$manager,$developer]);
         Permission ::create(['name'=> 'certificados.update'])->syncRoles([$profesor,$alumno,$manager,$developer]);
         //permisos profesores
         Permission ::create(['name'=> 'profesor.index'])->syncRoles([$manager,$developer]);

@@ -69,14 +69,14 @@
 											
 
                                             <td>
-                                                @can('certificaciones.destroy')
                                                 <form action="{{ route('certificaciones.destroy',$certificacione->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-success" href="{{ route('certificaciones.edit',$certificacione->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('certificaciones.edit',$certificacione->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     
-                                                   
+                                                    @can('certificados.destroy,certificados.edit,certificados.update')
+
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="Enviar" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                                 @endcan
                                                 <a href="{{ route('download-pdf-certificaciones') }}" class="btn btn-primary btn-sm float-right"

@@ -1,65 +1,64 @@
-LYVOS
-Prototipo para la gestion administrativa del Gimnasio Psicopedagogico Guilfod , El colegio guilford ubicado en bogotá en la localidad de suba ofrece diferentes servicios educativos , recientemente los clientes se han venido quejando por la falta de optimización de los procesos evidenciados en la institución sobre todo por las largas filas que deben realizar para poder realizar una solicitud  y de no poder realizar la consulta de los servicios.
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-OBJETIVOS:
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Desarrollar e implementar un sistema de información por módulos que pueda llevar el control  administrativo de los estudiantes del Gimnasio Psicopedagogico Gilford.
+## About Laravel
 
-OBJETIVO GENERAL:
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-Desarrollar e implementar un sistema de información por módulos que pueda llevar el control  administrativo por medio de solicitudes para la gestión de certificados  de los estudiantes del Gimnasio Psicopedagogico Gilford.
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-OBJETIVOS ESPECÍFICOS
+## Learning Laravel
 
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-Reconocer el proceso de gestión administrativa del Gimnasio Psicopedagogico Gilford para orientar y analizar los aspectos relacionados con el sistema de información.
-Analizar y comparar el procedimiento de administración de solicitudes y requerimientos que tiene actualmente el colegio, para poder determinar estrategias para el proceso de implementación de un software.
-Realizar un sistema de información que permita gestionar las solicitudes de los estudiantes.
-descargar las solicitudes o certificaciones en tiempo real de los usuarios que actúan en el sistema de información.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-Tabla 1.Requerimientos funcionales
-ID
-NOMBRE DEL REQUERIMIENTO
-RF-001
-Visualizar  noticias del colegio
-RF-002
-Visualizar la información de la empresa en una pagina web
-RF-003
-Registro de usuarios externos
-RF-004
-Registro de usuarios de forma interna
-RF-005
-Modificación claves de registros
-RF-006
-Registro y consulta de solicitudes por parte de los estudiantes 
-RF-007
-Registro y consulta de certificados por parte de los estudiantes 
-RF-008
-Habilitación de opciones según el rol 
-RF-009
-Registrar las notas y consultarlas 
-RF-010
-Registrar las materias y consultarlas
-RF-011
-Mostrar informe de solicitudes 
-RF-012
-Mostrar informe de consultas
-RF-013
-Mostrar informe de notas
-RF-014
-Mostrar informe de estudiantes
-RF-015
-Mostrar informe de materias
-Tabla 2 . Requerimientos No funcionales
-ID
-NOMBRE DEL REQUERIMIENTO
-RNF-001
-Responsive
-RNF-002
-Escalabilidad
-RNF-003
-Seguridad
-RNF-004
-Desempeño
+## Laravel Sponsors
 
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+
+### Premium Partners
+
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
